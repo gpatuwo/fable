@@ -16,8 +16,8 @@ column name | data type | details
 id          | integer   | not null, primary key
 name        | string    | not null
 description | string    |
-start_date  | date      | not null
-end_date    | date      | not null
+start_date  | integer   | not null
+end_date    | integer   | not null
 
 
 ## recipes
