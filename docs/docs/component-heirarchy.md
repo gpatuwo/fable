@@ -5,7 +5,7 @@
 
 **HomeContainer**
  - Home
- - Sidebar
+ - Navbar
 
 **NotesContainer**
  - NotesHeader

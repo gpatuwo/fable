@@ -1,14 +1,8 @@
 # Redux Structure (from example)
 
-The application's state is organized by data type. Under each data type, there
-may be sub-states. Each action is listed with the sequence of events that
-results from its invocation, ending with the API or a reducer. Subscribed
-components, i.e. containers, are listed at the end.
+The application's state is organized by data type. Under each data type, there may be sub-states. Each action is listed with the sequence of events that results from its invocation, ending with the API or a reducer. Subscribed components, i.e. containers, are listed at the end.
 
-Using this document, you should be able to trace an **action** starting with
-where it was invoked, through the **API**/**reducer** involved, and finally to
-the **components** that update as a result. Once you start implementing your
-Redux structure, you'll need to do the same.
+Using this document, you should be able to trace an **action** starting with where it was invoked, through the **API**/**reducer** involved, and finally to the **components** that update as a result. Once you start implementing your Redux structure, you'll need to do the same.
 
 ## Auth Cycles
 
