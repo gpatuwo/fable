@@ -1,4 +1,4 @@
-# Redux Structure
+# Redux Structure (from example)
 
 The application's state is organized by data type. Under each data type, there
 may be sub-states. Each action is listed with the sequence of events that

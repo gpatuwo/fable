@@ -23,11 +23,11 @@ Fable provides farm-to-table recipes for what's at farmers markets this week in 
 ## Design Documents
 
  - [Wireframes][wireframes]
- - [React Components][components]
+ - [React Components (example)][components]
  - [Sample State][sample-state]
- - [Redux Architecture][redux-structure]
+ - [Redux Architecture (example)][redux-structure]
  - [DB Schema][schema]
- - [API Endpoints][api]
+ - [API Endpoints (example)][api]
 
 [wireframes]: wireframes
 [components]: docs/component-heirarchy.md
@@ -36,11 +36,11 @@ Fable provides farm-to-table recipes for what's at farmers markets this week in 
 [schema]: docs/schema.md
 [api]: docs/api-endpoints.md
 
- ----------
+----------
 
 ## Implementation Timeline
 
-- ### Phase 1 (Auth)
-- ### Phase 2
-- ### Phase 3
-- ### Phase 4
+### Phase 1: Backend and Auth set up [ 2 days ]
+### Phase 2: Vegetables [ 2 days ]
+### Phase 3: Recipes [ 3 days ]
+### Phase 4: Liking, Saving, Tagging, Commenting [ 2 days]

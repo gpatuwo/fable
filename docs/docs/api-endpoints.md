@@ -1,4 +1,4 @@
-# API Endpoints
+# API Endpoints (from the example)
 
 ## HTML API
 
