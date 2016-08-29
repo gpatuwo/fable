@@ -6,8 +6,7 @@ Heroku link: http://fable-food.herokuapp.com/
 ----------
 
 
-MVP
--------------
+## MVP
 Fable provides farm-to-table recipes for what's at farmers markets this week in the Bay Area. The design of the site will rely on a clean grid format (like Pinterest's) but will be more similar in concept to [Food52](https://food52.com/recipes). This app will be built using Ruby on Rails and React/Redux with the following features:
 
  - New account creation, login and guest account
@@ -21,8 +20,8 @@ Fable provides farm-to-table recipes for what's at farmers markets this week in 
 ----------
 
 
-Design Documents
--------------
+## Design Documents
+
  - [Wireframes][wireframes]
  - [React Components][components]
  - [Sample State][sample-state]
@@ -39,5 +38,9 @@ Design Documents
 
  ----------
 
-Implementation Timeline
- -------------
+## Implementation Timeline
+
+- ### Phase 1 (Auth)
+- ### Phase 2
+- ### Phase 3
+- ### Phase 4
