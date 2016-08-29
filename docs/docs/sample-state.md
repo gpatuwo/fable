@@ -23,18 +23,7 @@
       ingredients: "4 peaches, handful of purslane for each serving, feta, pine nuts",
       instructions: "1. Wash your purslane really well. 2. De-pit and grill the peaches 3. As you wait for the peaches to cool, toast some pine nuts and crumble some feta 4. plate all four things together and toss with some olive oil and a squeeze of lemon.",
       author_id: 1,
-      tags: {
-        1: {
-          id: 1
-          name: "purslane"
-        },
-        2: {
-          id: 2
-          name: "peach"
-        }
-      }
     }
   }
-  tagFilters: [1, 2]
 }
 ```

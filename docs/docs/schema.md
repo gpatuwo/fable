@@ -30,15 +30,15 @@ instructions| text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 
 
-## tags (can do without? same as vegetables)
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-name        | string    | not null
-
 ## taggings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-recipe_id   | integer   | not null, foreign key (references recipes), indexed, unique [tag_id]
-veg_id      | integer   | not null, foreign key (references vegetables...maybe tags?), indexed
+recipe_id   | integer   | not null, foreign key (references recipes), indexed
+veg_id      | integer   | not null, foreign key (references vegetables), indexed
+
+## tags (bonus)
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+name        | string    | not null
