@@ -27,7 +27,7 @@ Fable provides farm-to-table recipes for what's at farmers markets this week in 
  - [Sample State][sample-state]
  - [Redux Architecture (example)][redux-structure]
  - [DB Schema][schema]
- - [API Endpoints (example)][api]
+ - [API Endpoints][api]
 
 [wireframes]: wireframes
 [components]: docs/component-heirarchy.md
