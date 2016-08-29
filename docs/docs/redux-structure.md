@@ -1,4 +1,4 @@
-# Redux Structure (from example)
+# Redux Structure
 
 The application's state is organized by data type. Under each data type, there may be sub-states. Each action is listed with the sequence of events that results from its invocation, ending with the API or a reducer. Subscribed components, i.e. containers, are listed at the end.
 
@@ -44,97 +44,97 @@ Using this document, you should be able to trace an **action** starting with whe
   0. invoked from API callbacks on success for actions that generate POST requests
   0. the `ErrorReducer` removes `errors` for a given `form` in the application's state.
 
-## Note Cycles
+## Recipe Cycles
 
-### Notes API Request Actions
+### Recipes API Request Actions
 
-* `fetchAllNotes`
-  0. invoked from `NotesIndex` `didMount`/`willReceiveProps`
-  0. `GET /api/notes` is called.
-  0. `receiveAllNotes` is set as the success callback.
+* `fetchAllRecipes`
+  0. invoked from `RecipesIndex` `didMount`/`willReceiveProps`
+  0. `GET /api/recipes` is called.
+  0. `receiveAllRecipes` is set as the success callback.
 
-* `createNote`
+* `createRecipe`
   0. invoked from new note button `onClick`
-  0. `POST /api/notes` is called.
-  0. `receiveSingleNote` is set as the success callback.
+  0. `POST /api/recipes` is called.
+  0. `receiveSingleRecipe` is set as the success callback.
 
-* `fetchSingleNote`
-  0. invoked from `NoteDetail` `didMount`/`willReceiveProps`
-  0. `GET /api/notes/:id` is called.
-  0. `receiveSingleNote` is set as the success callback.
+* `fetchSingleRecipe`
+  0. invoked from `RecipeDetail` `didMount`/`willReceiveProps`
+  0. `GET /api/recipes/:id` is called.
+  0. `receiveSingleRecipe` is set as the success callback.
 
-* `updateNote`
-  0. invoked from `NoteForm` `onSubmit`
-  0. `POST /api/notes` is called.
-  0. `receiveSingleNote` is set as the success callback.
+* `updateRecipe`
+  0. invoked from `RecipeForm` `onSubmit`
+  0. `POST /api/recipes` is called.
+  0. `receiveSingleRecipe` is set as the success callback.
 
-* `destroyNote`
+* `destroyRecipe`
   0. invoked from delete note button `onClick`
-  0. `DELETE /api/notes/:id` is called.
-  0. `removeNote` is set as the success callback.
+  0. `DELETE /api/recipes/:id` is called.
+  0. `removeRecipe` is set as the success callback.
 
-### Notes API Response Actions
+### Recipes API Response Actions
 
-* `receiveAllNotes`
+* `receiveAllRecipes`
   0. invoked from an API callback
-  0. the `NoteReducer` updates `notes` in the application's state.
+  0. the `RecipeReducer` updates `recipes` in the application's state.
 
-* `receiveSingleNote`
+* `receiveSingleRecipe`
   0. invoked from an API callback
-  0. the `NoteReducer` updates `notes[id]` in the application's state.
+  0. the `RecipeReducer` updates `recipes[id]` in the application's state.
 
-* `removeNote`
+* `removeRecipe`
   0. invoked from an API callback
-  0. the `NoteReducer` removes `notes[id]` from the application's state.
+  0. the `RecipeReducer` removes `recipes[id]` from the application's state.
 
-## Notebook Cycles
+## Vegetable Cycles
 
-### Notebooks API Request Actions
+### Vegetables API Request Actions
 
-* `fetchAllNotebooks`
-  0. invoked from `NotebooksIndex` `didMount`/`willReceiveProps`
-  0. `GET /api/notebooks` is called.
-  0. `receiveAllNotebooks` is set as the success callback.
+* `fetchAllVegetables`
+  0. invoked from `VegetablesIndex` `didMount`/`willReceiveProps`
+  0. `GET /api/vegetables` is called.
+  0. `receiveAllVegetables` is set as the success callback.
 
-* `createNotebook`
-  0. invoked from new notebook button `onClick`
-  0. `POST /api/notebooks` is called.
-  0. `receiveSingleNotebook` is set as the callback.
+* `createVegetable`
+  0. invoked from new vegetable button `onClick`
+  0. `POST /api/vegetables` is called.
+  0. `receiveSingleVegetable` is set as the callback.
 
-* `fetchSingleNotebook`
-  0. invoked from `NotebookDetail` `didMount`/`willReceiveProps`
-  0. `GET /api/notebooks/:id` is called.
-  0. `receiveSingleNotebook` is set as the success callback.
+* `fetchSingleVegetable`
+  0. invoked from `VegetableDetail` `didMount`/`willReceiveProps`
+  0. `GET /api/vegetables/:id` is called.
+  0. `receiveSingleVegetable` is set as the success callback.
 
-* `updateNotebook`
-  0. invoked from `NotebookForm` `onSubmit`
-  0. `POST /api/notebooks` is called.
-  0. `receiveSingleNotebook` is set as the success callback.
+* `updateVegetable`
+  0. invoked from `VegetableForm` `onSubmit`
+  0. `POST /api/vegetables` is called.
+  0. `receiveSingleVegetable` is set as the success callback.
 
-* `destroyNotebook`
-  0. invoked from delete notebook button `onClick`
-  0. `DELETE /api/notebooks/:id` is called.
-  0. `removeNotebook` is set as the success callback.
+* `destroyVegetable`
+  0. invoked from delete vegetable button `onClick`
+  0. `DELETE /api/vegetables/:id` is called.
+  0. `removeVegetable` is set as the success callback.
 
-### Notebooks API Response Actions
+### Vegetables API Response Actions
 
-* `receiveAllNotebooks`
+* `receiveAllVegetables`
   0. invoked from an API callback.
-  0. The `Notebook` reducer updates `notebooks` in the application's state.
+  0. The `Vegetable` reducer updates `vegetables` in the application's state.
 
-* `receiveSingleNotebook`
+* `receiveSingleVegetable`
   0. invoked from an API callback.
-  0. The `Notebook` reducer updates `notebooks[id]` in the application's state.
+  0. The `Vegetable` reducer updates `vegetables[id]` in the application's state.
 
-* `removeNotebook`
+* `removeVegetable`
   0. invoked from an API callback.
-  0. The `Notebook` reducer removes `notebooks[id]` from the application's state.
+  0. The `Vegetable` reducer removes `vegetables[id]` from the application's state.
 
 ## SearchSuggestion Cycles
 
 * `fetchSearchSuggestions`
-  0. invoked from `NoteSearchBar` `onChange` when there is text
-  0. `GET /api/notes` is called with `text` param.
+  0. invoked from `VegetableSearchBar` `onChange` when there is text
+  0. `GET /api/vegetables` is called with `text` param.
   0. `receiveSearchSuggestions` is set as the success callback.
 
 * `receiveSearchSuggestions`
@@ -142,5 +142,5 @@ Using this document, you should be able to trace an **action** starting with whe
   0. The `SearchSuggestion` reducer updates `suggestions` in the application's state.
 
 * `removeSearchSuggestions`
-  0. invoked from `NoteSearchBar` `onChange` when empty
+  0. invoked from `VegetableSearchBar` `onChange` when empty
   0. The `SearchSuggestion` reducer resets `suggestions` in the application's state.
