@@ -30,12 +30,12 @@ Design Documents
  - [DB Schema][schema]
  - [API Endpoints][api]
  ----------
-[wireframes]: docs/wireframes
-[components]: docs/linked-docs/component-heirarchy.md
-[sample-state]: docs/linked-docs/sample-state.md
-[redux-structure]: docs/linked-docs/redux-structure.md
-[schema]: docs/linked-docs/schema.md
-[api]: docs/linked-docs/api-endpoints.md
+[wireframes]: wireframes
+[components]: linked-docs/component-heirarchy.md
+[sample-state]: linked-docs/sample-state.md
+[redux-structure]: linked-docs/redux-structure.md
+[schema]: linked-docs/schema.md
+[api]: linked-docs/api-endpoints.md
 
 Implementation Timeline
  -------------
