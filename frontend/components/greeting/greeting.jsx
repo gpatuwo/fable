@@ -9,11 +9,13 @@ const sessionLinks = () => (
 )
 
 const personalGreeting = (currentUser, logout) => (
-  <h2 className='header-greeting'>Welcome back, {currentUser.username}!</h2>
-  <button className='header-button' onClick={logout}>Log Out</button>
+  <div>
+    <h2 className='header-greeting'>Welcome back, {currentUser.username}!</h2>
+    <button className='header-button' onClick={logout}>Log Out</button>
+  </div>
 )
 
-function Greeting({currentUser, logout}){
+const Greeting = (currentUser, logout) => {
   if (currentUser) {
     return personalGreeting(currentUser, logout);
   } else {
