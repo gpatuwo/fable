@@ -54,6 +54,7 @@ Objective: Functioning rails project with front-end Authentication
  - Blank landing component after signup/signin
  - Style signup/signin components
  - Seed users
+ - Get it up and running on Heroku
  - Review phase 1
 
 ### Phase 2: Vegetables [ 3 days ]
@@ -80,5 +81,15 @@ Objective: Vegetables are associated with Recipes that can be created, read, edi
   - Style recipe components
   - Seed recipes
 
-### Phase 4: Liking, Saving, Commenting [ 2 days]
-### Bonus: Tagging
+### Phase 4: Commenting, Liking, Saving [ 2 days]
+Objective: Users can interact with the recipes by leaving comments, liking and saving recipes
+
+  - Comment model and joining table
+  - Adds comment to recipes
+  - Seed comments
+  - Like model and joining table (nested API)
+  - Displays likes for each recipe
+  - Seed likes
+  - Save model and joining table
+
+### Bonus: Tagging, User Profiles
