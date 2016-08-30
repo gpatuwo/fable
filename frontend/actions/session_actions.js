@@ -1,4 +1,4 @@
-export const SessionConstant = {
+export const SessionConstants = {
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT',
   SIGNUP: 'SIGNUP',
@@ -7,25 +7,25 @@ export const SessionConstant = {
 };
 
 export const signup = user => ({
-  type: SessionConstant.SIGNUP,
+  type: SessionConstants.SIGNUP,
   user
 })
 
 export const login = user => ({
-  type: SessionConstant.LOGIN,
+  type: SessionConstants.LOGIN,
   user
 })
 
 export const logout = () => ({
-  type: SessionConstant.LOGOUT
+  type: SessionConstants.LOGOUT
 })
 
 export const receiveCurrentUser = currentUser => ({
-  type: SessionConstant.RECEIVE_CURRENT_USER,
+  type: SessionConstants.RECEIVE_CURRENT_USER,
   currentUser
 })
 
 export const receiveErrors = errors => ({
-  type: SessionCOnstants.RECEIVE_ERRORS,
+  type: SessionConstants.RECEIVE_ERRORS,
   errors
 })
