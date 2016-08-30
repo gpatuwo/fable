@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render "api/users/#{@user.id}"
+    render "api/users/user"
   end
 
   private
