@@ -15,9 +15,19 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-description | string    |
-start_date  | integer   | not null
-end_date    | integer   | not null
+description | text      |
+jan         | boolean   | not null
+feb         | boolean   | not null
+march       | boolean   | not null
+april       | boolean   | not null
+may         | boolean   | not null
+june        | boolean   | not null
+july        | boolean   | not null
+aug         | boolean   | not null
+sept        | boolean   | not null
+oct         | boolean   | not null
+nov         | boolean   | not null
+dec         | boolean   | not null
 
 
 ## recipes
