@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
             </li>
         ))}
       </ul>
-    )
+    );
   }
 
   render(){
@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
                 <input type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
-                        className="ogin-input" />
+                        className="login-input" />
             </label>
 
             <br />
@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
           </div>
         </form>
       </div>
-    )
+    );
   }
 
 }
