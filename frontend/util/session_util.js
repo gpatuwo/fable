@@ -20,7 +20,7 @@ export const login = function(user, success, error) {
   });
 };
 
-export const logout = function(user, success, error) {
+export const logout = function(success) {
   $.ajax({
     method: 'DELETE',
     url: '/api/session',

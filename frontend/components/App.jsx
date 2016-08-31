@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import NavBarContainer from './nav_bar/nav_bar_container.js';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = ({children}) => (
