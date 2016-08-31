@@ -3,7 +3,7 @@ import { receiveCurrentUser,
           SessionConstants
         } from '../actions/session_actions';
 
-import { login, singup, logout } from '../util/session_util';
+import { login, signup, logout } from '../util/session_util';
 
 export default ({ getState, dispatch }) => next => action => {
   const successCallback = user => dispatch(receiveCurrentUser(user));

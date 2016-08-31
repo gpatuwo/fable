@@ -1,4 +1,4 @@
-import { SessionConstants} from '../actions/session_actions'
+import { SessionConstants} from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
@@ -19,4 +19,6 @@ const SessionReducer = function (state = _nullUser, action) {
     default:
       return state;
   }
-}
+};
+
+export default SessionReducer;

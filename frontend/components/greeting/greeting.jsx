@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter} from 'react-router';
 
 const sessionLinks = () => (
   <nav className='login-signup'>
     <Link to="/login" activeClassName='current'>Login</Link>
-    <Link to='/singup' activeClassName='current'>Sign up</Link>
+    &nbsp;or&nbsp;
+    <Link to='/signup' activeClassName='current'>Sign up</Link>
   </nav>
 )
 
@@ -23,4 +24,4 @@ const Greeting = ({currentUser, logout}) => {
   }
 }
 
-export default Greeting;
+export default withRouter(Greeting);
