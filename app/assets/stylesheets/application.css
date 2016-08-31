@@ -2,6 +2,17 @@
   font-family: 'Futura';
 }
 
+.header-logo img {
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-signup {
+  text-align: center;
+}
+
 .login-form-container {
   display: flex;
   justify-content: center;
@@ -19,6 +30,6 @@
 }
 
 .login-form-box {
-  outline: 1px solid black;
+  outline: 3px solid black;
   padding: 20px;
 }

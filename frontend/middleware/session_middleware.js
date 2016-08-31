@@ -14,15 +14,15 @@ export default ({ getState, dispatch }) => next => action => {
 
   switch (action.type) {
     case SessionConstants.LOGIN:
-      login(action.user, successCallback, errorCallback)
+      login(action.user, successCallback, errorCallback);
       return next(action);
     case SessionConstants.LOGOUT:
       logout(() => next(action));
       break;
     case SessionConstants.SIGNUP:
-      signup(action.user, successCallback, errorCallback)
+      signup(action.user, successCallback, errorCallback);
       return next(action);
     default:
       return next(action);
   }
-}
+};

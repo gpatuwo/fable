@@ -7,14 +7,14 @@ const sessionLinks = () => (
     &nbsp;or&nbsp;
     <Link to='/signup' activeClassName='current'>Sign up</Link>
   </nav>
-)
+);
 
 const personalGreeting = (currentUser, logout) => (
   <div>
     <h2 className='header-greeting'>Welcome back, {currentUser.username}!</h2>
     <button className='header-button' onClick={logout}>Log Out</button>
   </div>
-)
+);
 
 const Greeting = ({currentUser, logout}) => {
   if (currentUser) {
@@ -22,6 +22,6 @@ const Greeting = ({currentUser, logout}) => {
   } else {
     return sessionLinks();
   }
-}
+};
 
 export default withRouter(Greeting);
