@@ -6,8 +6,8 @@ const _nullUser = Object.freeze({
   errors: []
 });
 
-const SessionReducer = function (start = _nullUser, action) {
-  swtich(action.type){
+const SessionReducer = function (state = _nullUser, action) {
+  switch(action.type){
     case SessionConstants.RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
       return merge({}, _nullUser, {currentUser});

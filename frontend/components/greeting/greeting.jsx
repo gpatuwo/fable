@@ -15,7 +15,7 @@ const personalGreeting = (currentUser, logout) => (
   </div>
 )
 
-const Greeting = (currentUser, logout) => {
+const Greeting = ({currentUser, logout}) => {
   if (currentUser) {
     return personalGreeting(currentUser, logout);
   } else {
