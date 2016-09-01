@@ -15,7 +15,6 @@ class Api::VegetablesController < ApplicationController
 
   def create
     @vegetable = Vegetable.new(vegetable_params)
-    debugger
     if @vegetable.save
       render "api/vegetables/show"
     else

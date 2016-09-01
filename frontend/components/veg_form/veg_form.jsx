@@ -27,6 +27,7 @@ class VegForm extends React.Component {
     Months.forEach( (month)=> {this.state[month] = false;});
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.navigateToRoot = this.navigateToRoot.bind(this);
   }
 
 
@@ -44,45 +45,51 @@ class VegForm extends React.Component {
     return e => this.setState({[month]: e.target.checked});
   }
 
+  navigateToRoot(){
+    this.props.router.push("/");
+  }
+
   render(){
     return(
       <div className="new-veg-container">
         <div className="new-veg-form">
           <h3 className="new-veg-title">Submit a New Vegetable</h3>
 
-        <form onSubmit={this.handleSubmit}>
-          <label className='veg-field'>Name</label>
-          <br />
-          <input type='string' value={this.state.name}
-            onChange={this.update("name")}
-            className='veg-field'/>
-          <br />
-          <label className='veg-field'>Description</label>
-          <br />
-          <textarea rows="10" cols="70" value={this.state.description}
-              onChange={this.update("description")}
-              className='veg-field'/>
-
-          <div>
-            <label className='veg-field'>In Season?</label>
+          <form onSubmit={this.handleSubmit}>
+            <label className='veg-field'>Name</label>
             <br />
-            { Months.map( (month) => (
-              <label key={month}>
-                {month}
-                <input type='checkbox' value={this.state[month]}
-                  onChange={this.updateCheckbox(month)}
-                  className='veg-field'
-                  checked={this.state[month]}/>
-                <br />
-              </label>
-            ))}
-          </div>
+            <input type='string' value={this.state.name}
+              onChange={this.update("name")}
+              className='veg-field'/>
+            <br />
+            <label className='veg-field'>Description</label>
+            <br />
+            <textarea rows="10" cols="70" value={this.state.description}
+                onChange={this.update("description")}
+                className='veg-field'/>
+
+            <div>
+              <label className='veg-field'>In Season?</label>
+              <br />
+              { Months.map( (month) => (
+                <label key={month}>
+                  {month}
+                  <input type='checkbox' value={this.state[month]}
+                    onChange={this.updateCheckbox(month)}
+                    className='veg-field'
+                    checked={this.state[month]}/>
+                  <br />
+                </label>
+              ))}
+            </div>
 
 
-          <div className='button-holder'>
-            <input type='submit' value="Submit Veg" className="new-veg-button"/>
-          </div>
-        </form>
+            <div className='button-holder'>
+              <input type='submit' value="Submit Veg" className="new-veg-button"
+              onClick={this.navigateToRoot}/>
+            </div>
+          </form>
+
         </div>
       </div>
     );
