@@ -9,16 +9,17 @@ const sessionLinks = () => (
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
-  <div>
-    <h2 className='header-greeting'>Welcome back, {currentUser.username}!</h2>
+const personalGreeting = (currentUser, router, logout) => (
+  <div className="welcome-logout">
+    <p className='header-greeting'>Welcome back, {currentUser.username}!</p>
+    <button className='header-button' onClick={ () => router.push("/vegetables/new")}>New Veg</button>
     <button className='header-button' onClick={logout}>Log Out</button>
   </div>
 );
 
-const Greeting = ({currentUser, logout}) => {
+const Greeting = ({currentUser, router, logout}) => {
   if (currentUser) {
-    return personalGreeting(currentUser, logout);
+    return personalGreeting(currentUser, router, logout);
   } else {
     return sessionLinks();
   }

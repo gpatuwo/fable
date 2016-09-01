@@ -6,7 +6,7 @@ class Api::VegetablesController < ApplicationController
 
   def show
     @vegetable = Vegetable.find(params[:id])
-    render "api/vegetables/vegetable"
+    render "api/vegetables/show"
   end
 
   def new
@@ -15,8 +15,9 @@ class Api::VegetablesController < ApplicationController
 
   def create
     @vegetable = Vegetable.new(vegetable_params)
+    debugger
     if @vegetable.save
-      render "api/vegetables/vegetable"
+      render "api/vegetables/show"
     else
       render json: @vegetable.errors.full_messages
     end
@@ -25,7 +26,7 @@ class Api::VegetablesController < ApplicationController
   def destroy
     @vegetable = Vegetable.find(params[:id])
     if @vegetable.destroy
-      render "api/vegetables/vegetable", status: 200
+      render "api/vegetables/show", status: 200
     else
       @errors = @vegetable.errors.full_messages
       render "api/shared/error", status: 400

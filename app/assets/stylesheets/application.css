@@ -33,3 +33,12 @@
   outline: 3px solid black;
   padding: 20px;
 }
+
+.welcome-logout {
+  text-align: center;
+  font-size: 16px;
+}
+.new-veg-form {
+  float: left;
+  margin: 50px 100px;
+}

@@ -40,33 +40,41 @@ class VegForm extends React.Component {
     this.props.createVegetable({vegetable});
   }
 
+  updateCheckbox(month){
+    return e => this.setState({[month]: e.target.checked});
+  }
+
   render(){
     return(
       <div className="new-veg-container">
         <div className="new-veg-form">
-          <h3 className="new-veg-title">Submit a new veg!</h3>
+          <h3 className="new-veg-title">Submit a New Vegetable</h3>
 
         <form onSubmit={this.handleSubmit}>
           <label className='veg-field'>Name</label>
+          <br />
           <input type='string' value={this.state.name}
             onChange={this.update("name")}
             className='veg-field'/>
-
+          <br />
           <label className='veg-field'>Description</label>
-          <input type='text' value={this.state.description}
+          <br />
+          <textarea rows="10" cols="70" value={this.state.description}
               onChange={this.update("description")}
               className='veg-field'/>
 
           <div>
             <label className='veg-field'>In Season?</label>
+            <br />
             { Months.map( (month) => (
-              <label>
+              <label key={month}>
                 {month}
                 <input type='checkbox' value={this.state[month]}
-                  onChange={this.update(month)}
-                  className='veg-field'/>
+                  onChange={this.updateCheckbox(month)}
+                  className='veg-field'
+                  checked={this.state[month]}/>
+                <br />
               </label>
-
             ))}
           </div>
 

@@ -16,7 +16,7 @@ export default ({getState, dispatch}) => next => action => {
   const vegetablesSuccess = data => dispatch(receiveVegetables(data));
   const vegetableSuccess = data => dispatch(receiveVegetable(data));
   const result = next(action);
-
+  
   switch (action.type) {
     case VegetableConstants.REQUEST_VEGETABLES:
       fetchVegetables(vegetablesSuccess);
@@ -25,6 +25,7 @@ export default ({getState, dispatch}) => next => action => {
       fetchVegetables(action.id, vegetableSuccess);
       break;
     case VegetableConstants.CREATE_VEGETABLE:
+
       createVegetable(action.vegetable, vegetableSuccess);
       break;
     default:
