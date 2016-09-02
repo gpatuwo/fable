@@ -51,14 +51,16 @@ class VegForm extends React.Component {
     this.props.router.push(`/`);
   }
 
-  uploadPhoto(e){
+  uploadPhoto(e) {
     e.preventDefault();
-    cloudinary.openUploadWidget(
-      window.cloudinary_options, (error, results) => {
-      if(!error){
-        this.props.postImage(results[0].url);
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
+      debugger
+      if(!error) {
+        this.setState({image: results[0].url});
+      } else {
+        console.log('ugh cloudinary upload error');
       }
-    }.bind(this));
+    });
   }
 
   render(){
