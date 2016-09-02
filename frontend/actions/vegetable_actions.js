@@ -4,6 +4,7 @@ export const VegetableConstants = {
   REQUEST_VEGETABLES: "REQUEST_VEGETABLES",
   REQUEST_VEGETABLE: "REQUEST_VEGETABLE",
   CREATE_VEGETABLE: "CREATE_VEGETABLE",
+  DELETE_VEGETABLE: "DELETE_VEGETABLE"
 };
 
 export const requestVegetables = () => ({
@@ -28,4 +29,9 @@ export const receiveVegetable = vegetable => ({
 export const createVegetable = vegetable => ({
   type: VegetableConstants.CREATE_VEGETABLE,
   vegetable
+});
+
+export const deleteVegetable = id => ({
+  type: VegetableConstants.DELETE_VEGETABLE,
+  id
 });

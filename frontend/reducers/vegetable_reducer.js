@@ -8,6 +8,10 @@ const VegetablesReducer = (state = {}, action) => {
     case VegetableConstants.RECEIVE_VEGETABLE:
       const newVegetable = {[action.vegetable.id]: action.vegetable};
       return merge({}, state, newVegetable);
+    case VegetableConstants.DELETE_VEGETABLE:
+      let nextState = merge({}, state);
+      delete nextState[action.id];
+      return nextState;
     default:
       return state;
   }

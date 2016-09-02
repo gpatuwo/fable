@@ -18,8 +18,7 @@ import {hashHistory} from 'react-router';
 export default ({getState, dispatch}) => next => action => {
   const vegetablesSuccess = data => {
     dispatch(receiveVegetables(data));
-
-  }
+  };
   const vegetableSuccess = data => {
     dispatch(receiveVegetable(data));
     hashHistory.push(`/vegetables/${data.id}`);
@@ -35,6 +34,9 @@ export default ({getState, dispatch}) => next => action => {
       break;
     case VegetableConstants.CREATE_VEGETABLE:
       createVegetable(action.vegetable, vegetableSuccess);
+      break;
+    case VegetableConstants.DELETE_VEGETABLE:
+      deleteVegetable( action.id, () => next(action));
       break;
     default:
       break;

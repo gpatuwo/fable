@@ -1,7 +1,8 @@
 import {connect} from 'react-redux';
 import VegShow from './veg_show';
 // Actions
-import {requestVegetable} from '../../actions/vegetable_actions.js';
+import {requestVegetable, deleteVegetable}
+from '../../actions/vegetable_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
   const vegId = parseInt(ownProps.params.vegId);
@@ -13,8 +14,9 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  requestVegetable: id => dispatch(requestVegetable(id))
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  requestVegetable: id => dispatch(requestVegetable(id)),
+  deleteVegetable: () => dispatch(deleteVegetable(ownProps.params.vegId))
 });
 
 export default connect(

@@ -23,11 +23,10 @@ export const createVegetable = (vegetable, success) => {
   });
 };
 
-export const deleteVegetable = (vegetable, success) => {
+export const deleteVegetable = (id, success) => {
   $.ajax({
     method: 'DELETE',
-    url: 'api/vegetables',
-    data: vegetable,
+    url: `api/vegetables/${id}`,
     success,
     error: () => {
       console.log("deletion error in VegetableApiUtil#delete");
