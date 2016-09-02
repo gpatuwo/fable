@@ -29,7 +29,6 @@ class VegForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
-    this.navigateToShow = this.navigateToShow.bind(this);
   }
 
 
@@ -56,10 +55,6 @@ class VegForm extends React.Component {
         console.log('ugh cloudinary upload error');
       }
     });
-  }
-
-  navigateToShow(){
-    this.props.router.push(`/vegetables/${this.state.id}`);
   }
 
   render(){
@@ -110,8 +105,7 @@ class VegForm extends React.Component {
             <div className='button-holder'>
               <input type='submit'
                 value="Submit Veg"
-                className="new-veg-button"
-                onClick={this.handleSubmit}/>
+                className="new-veg-button"/>
             </div>
           </form>
 

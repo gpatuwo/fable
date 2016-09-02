@@ -10,13 +10,19 @@ import { requestVegetables,
          receiveVegetables,
          VegetableConstants
 } from '../actions/vegetable_actions.js';
+
+import {hashHistory} from 'react-router';
+
 // filter constants will go here too
 
 export default ({getState, dispatch}) => next => action => {
   const vegetablesSuccess = data => dispatch(receiveVegetables(data));
-  const vegetableSuccess = data => dispatch(receiveVegetable(data));
+  const vegetableSuccess = data => {
+    dispatch(receiveVegetable(data));
+    hashHistory.push(`/vegetables/${data.id}`);
+  };
   const result = next(action);
-  
+
   switch (action.type) {
     case VegetableConstants.REQUEST_VEGETABLES:
       fetchVegetables(vegetablesSuccess);
