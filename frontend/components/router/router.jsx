@@ -6,13 +6,15 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from '../App.jsx';
 import SessionFormContainer from '../session_form/session_form_container';
 import VegFormContainer from '../veg_form/veg_form_container.js';
-import VegShowContainer from '../veg_show/veg_show_container';
+import VegShowContainer from '../veg_show/veg_show_container.js';
+console.log(VegShowContainer);
 
 class AppRouter extends React.Component{
   constructor(props){
     super(props);
     this._ensureLoggedIn = this._ensureLoggedIn.bind(this);
     this._redirectIfLoggedIn = this._redirectIfLoggedIn.bind(this);
+    this.vegetables = this.vegetables.bind(this);
   }
 
   _ensureLoggedIn(nextState, replace){
@@ -29,6 +31,10 @@ class AppRouter extends React.Component{
     }
   }
 
+  vegetables(){
+    this.props.fetchVegetables();
+  }
+
   render(){
     return(
       <Router history={ hashHistory }>
@@ -38,8 +44,10 @@ class AppRouter extends React.Component{
             onEnter={this._redirectIfLoggedIn}/>
           <Route path="signup" component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
-          <Route path="vegetables/new" component= {VegFormContainer} onEnter={this._ensureLoggedIn}/>
-          <Route path="vegetables/:vegId" component={VegShowContainer}/>
+          <Route path="vegetables" onEnter={this.vegetables}>
+            <Route path=":vegId" component={VegShowContainer}/>
+            <Route path="new" component= {VegFormContainer} onEnter={this._ensureLoggedIn}/>
+          </Route>
         </Route>
       </Router>
     );

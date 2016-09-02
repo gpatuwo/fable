@@ -28,8 +28,8 @@ class VegForm extends React.Component {
     Months.forEach( (month)=> {this.state[month] = false;});
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.navigateToShow = this.navigateToShow.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
+    this.navigateToShow = this.navigateToShow.bind(this);
   }
 
 
@@ -47,10 +47,6 @@ class VegForm extends React.Component {
     return e => this.setState({[month]: e.target.checked});
   }
 
-  navigateToShow(){
-    this.props.router.push(`/`);
-  }
-
   uploadPhoto(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
@@ -60,6 +56,10 @@ class VegForm extends React.Component {
         console.log('ugh cloudinary upload error');
       }
     });
+  }
+
+  navigateToShow(){
+    this.props.router.push(`/`);
   }
 
   render(){
@@ -78,10 +78,10 @@ class VegForm extends React.Component {
 
             <label className='veg-field'>Photo</label>
             <br />
-            {this.state.image ? (
-              <img src={this.state.image}/>
-            ): (<button className='new-veg-photo'
-              onClick={this.uploadPhoto}>Upload photo</button>)
+            {this.state.image ?
+              ( <img src={this.state.image}/>) :
+              ( <button className='new-veg-photo'
+              onClick={this.uploadPhoto}>Upload photo</button> )
             }
             <br />
 
@@ -111,7 +111,7 @@ class VegForm extends React.Component {
               <input type='submit'
                 value="Submit Veg"
                 className="new-veg-button"
-                onClick={this.navigateToShow}/>
+                onClick={this.handleSubmit}/>
             </div>
           </form>
 
