@@ -44,8 +44,8 @@ class AppRouter extends React.Component{
           <Route path="signup" component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
           <Route path="vegetables" onEnter={this.vegetables}>
-            <Route path=":vegId" component={VegShowContainer}/>
             <Route path="new" component= {VegFormContainer} onEnter={this._ensureLoggedIn}/>
+            <Route path=":vegId" component={VegShowContainer}/>
           </Route>
         </Route>
       </Router>

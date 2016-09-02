@@ -5,8 +5,8 @@ import {withRouter} from 'react-router';
 const VegShow = ({veg, vegId, requestVegetable, children}) => {
   return(
     <div className="veg-show">
-      <h2 className="veg-name">{veg.name}</h2>
       <img className="veg-photo" src={veg.image}/>
+      <h2 className="veg-name">{veg.name && veg.name.toLowerCase()}</h2>
       <p className="veg-description">
         {veg.description}
       </p>

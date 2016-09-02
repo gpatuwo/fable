@@ -59,7 +59,7 @@ class VegForm extends React.Component {
   }
 
   navigateToShow(){
-    this.props.router.push(`/`);
+    this.props.router.push(`/vegetables/${this.state.id}`);
   }
 
   render(){

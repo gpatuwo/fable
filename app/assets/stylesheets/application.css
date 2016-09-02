@@ -42,3 +42,19 @@
   float: left;
   margin: 50px 100px;
 }
+
+.veg-show {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.veg-name {
+  position: absolute;
+  top: 29px;
+  width: 95%;
+  color: white;
+  font-size: 700%;
+  text-align: center;
+}
