@@ -6,7 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from '../App.jsx';
 import SessionFormContainer from '../session_form/session_form_container';
 import VegFormContainer from '../veg_form/veg_form_container.js';
-
+import VegShowContainer from '../veg_show/veg_show_container';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -39,6 +39,7 @@ class AppRouter extends React.Component{
           <Route path="signup" component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
           <Route path="vegetables/new" component= {VegFormContainer} onEnter={this._ensureLoggedIn}/>
+          <Route path="vegetables/:vegId" component={VegShowContainer}/>
         </Route>
       </Router>
     );
