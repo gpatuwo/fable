@@ -12,7 +12,8 @@ const sessionLinks = () => (
 const personalGreeting = (currentUser, router, logout) => (
   <div className="welcome-logout">
     <p className='header-greeting'>Welcome back, {currentUser.username}!</p>
-    <button className='header-button' onClick={ () => router.push("/vegetables/new")}>New Veg</button>
+    <button className='header-button'
+      onClick={ () => router.push("/vegetables/new")}>New Veg</button>
     <button className='header-button' onClick={logout}>Log Out</button>
   </div>
 );

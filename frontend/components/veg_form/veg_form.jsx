@@ -77,8 +77,12 @@ class VegForm extends React.Component {
             <br />
 
             <label className='veg-field'>Photo</label>
-            <button className='new-veg-photo'
-              onClick={this.uploadPhoto}>Upload photo</button>
+            <br />
+            {this.state.image ? (
+              <img src={this.state.image}/>
+            ): (<button className='new-veg-photo'
+              onClick={this.uploadPhoto}>Upload photo</button>)
+            }
             <br />
 
             <label className='veg-field'>Description</label>
@@ -104,7 +108,10 @@ class VegForm extends React.Component {
 
 
             <div className='button-holder'>
-              <input type='submit' value="Submit Veg" className="new-veg-button"/>
+              <input type='submit'
+                value="Submit Veg"
+                className="new-veg-button"
+                onClick={this.navigateToShow}/>
             </div>
           </form>
 
