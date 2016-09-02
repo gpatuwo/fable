@@ -7,7 +7,6 @@ import App from '../App.jsx';
 import SessionFormContainer from '../session_form/session_form_container';
 import VegFormContainer from '../veg_form/veg_form_container.js';
 import VegShowContainer from '../veg_show/veg_show_container.js';
-console.log(VegShowContainer);
 
 class AppRouter extends React.Component{
   constructor(props){
