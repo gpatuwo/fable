@@ -10,6 +10,7 @@ const VegShow = ({veg, vegId, requestVegetable, children}) => {
       <p className="veg-description">
         {veg.description}
       </p>
+      
     </div>
   );
 };

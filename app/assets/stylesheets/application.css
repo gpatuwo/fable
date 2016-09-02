@@ -3,7 +3,7 @@
 }
 
 .header-logo img {
-  width: 25%;
+  width: 15%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -46,14 +46,23 @@
 .veg-show {
   position: relative;
   display: block;
-  margin: auto;
-  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%;
+}
+
+.vegetable-index-item {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%;
 }
 
 .veg-name {
   position: absolute;
   top: 29px;
-  width: 95%;
+  width: 100%;
   color: white;
   font-size: 700%;
   text-align: center;

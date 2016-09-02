@@ -7,6 +7,7 @@ import App from '../App.jsx';
 import SessionFormContainer from '../session_form/session_form_container';
 import VegFormContainer from '../veg_form/veg_form_container.js';
 import VegShowContainer from '../veg_show/veg_show_container.js';
+import VegIndexContainer from '../veg_index/veg_index_container.js';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -39,13 +40,20 @@ class AppRouter extends React.Component{
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
 
-          <Route path="login" component={ SessionFormContainer }
+          <Route path="login"
+            component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
-          <Route path="signup" component={ SessionFormContainer }
+          <Route path="signup"
+            component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
-          <Route path="vegetables" onEnter={this.vegetables}>
-            <Route path="new" component= {VegFormContainer} onEnter={this._ensureLoggedIn}/>
-            <Route path=":vegId" component={VegShowContainer}/>
+          <Route path="vegetables"
+           onEnter={this.vegetables}>
+            <IndexRoute   component={VegIndexContainer}/>
+            <Route path="new"
+              component= {VegFormContainer}
+              onEnter={this._ensureLoggedIn}/>
+            <Route path=":vegId"
+              component={VegShowContainer}/>
           </Route>
         </Route>
       </Router>

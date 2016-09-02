@@ -16,7 +16,10 @@ import {hashHistory} from 'react-router';
 // filter constants will go here too
 
 export default ({getState, dispatch}) => next => action => {
-  const vegetablesSuccess = data => dispatch(receiveVegetables(data));
+  const vegetablesSuccess = data => {
+    dispatch(receiveVegetables(data));
+
+  }
   const vegetableSuccess = data => {
     dispatch(receiveVegetable(data));
     hashHistory.push(`/vegetables/${data.id}`);
@@ -31,7 +34,6 @@ export default ({getState, dispatch}) => next => action => {
       fetchVegetables(action.id, vegetableSuccess);
       break;
     case VegetableConstants.CREATE_VEGETABLE:
-
       createVegetable(action.vegetable, vegetableSuccess);
       break;
     default:
