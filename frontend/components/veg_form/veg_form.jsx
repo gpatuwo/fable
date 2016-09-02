@@ -54,7 +54,6 @@ class VegForm extends React.Component {
   uploadPhoto(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
-      debugger
       if(!error) {
         this.setState({image: results[0].url});
       } else {
@@ -105,8 +104,7 @@ class VegForm extends React.Component {
 
 
             <div className='button-holder'>
-              <input type='submit' value="Submit Veg" className="new-veg-button"
-              onClick={this.navigateToShow}/>
+              <input type='submit' value="Submit Veg" className="new-veg-button"/>
             </div>
           </form>
 

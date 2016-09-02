@@ -37,6 +37,7 @@ class Api::VegetablesController < ApplicationController
     params.require(:vegetable).permit(
       :name,
       :description,
+      :image,
       :jan,
       :feb,
       :mar,
