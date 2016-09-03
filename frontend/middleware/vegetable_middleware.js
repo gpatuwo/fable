@@ -36,7 +36,7 @@ export default ({getState, dispatch}) => next => action => {
       createVegetable(action.vegetable, vegetableSuccess);
       break;
     case VegetableConstants.DELETE_VEGETABLE:
-      deleteVegetable( action.id, () => next(action));
+      deleteVegetable(action.id, () => next(action));
       break;
     default:
       break;
