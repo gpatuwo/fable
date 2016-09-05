@@ -18,7 +18,7 @@ class Api::VegetablesController < ApplicationController
     if @vegetable.save
       render "api/vegetables/show"
     else
-      render json: @vegetable.errors.full_messages
+      render json: @vegetable.errors.full_messages, status: 422
     end
   end
 

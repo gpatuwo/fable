@@ -2,13 +2,15 @@
 import { fetchVegetables,
          fetchVegetable,
          createVegetable,
-         deleteVegetable
+         deleteVegetable,
+         updateVegetable
 } from '../util/vegetable_api_util.js';
 // Vegetable Action
 import { requestVegetables,
          receiveVegetable,
          receiveVegetables,
-         VegetableConstants
+         VegetableConstants,
+         receiveErrors
 } from '../actions/vegetable_actions.js';
 
 import {hashHistory} from 'react-router';
@@ -25,6 +27,11 @@ export default ({getState, dispatch}) => next => action => {
   };
   const result = next(action);
 
+  const errorCallback = xhr => {
+    const errors = xhr.responseJSON;
+    dispatch(receiveErrors(errors));
+  };
+
   switch (action.type) {
     case VegetableConstants.REQUEST_VEGETABLES:
       fetchVegetables(vegetablesSuccess);
@@ -33,10 +40,13 @@ export default ({getState, dispatch}) => next => action => {
       fetchVegetables(action.id, vegetableSuccess);
       break;
     case VegetableConstants.CREATE_VEGETABLE:
-      createVegetable(action.vegetable, vegetableSuccess);
+      createVegetable(action.vegetable, vegetableSuccess, errorCallback);
       break;
     case VegetableConstants.DELETE_VEGETABLE:
       deleteVegetable(action.id, () => next(action));
+      break;
+    case VegetableConstants.UPDATE_VEGETABLE:
+      updateVegetable(action.vegetable, vegetableSuccess);
       break;
     default:
       break;

@@ -14,12 +14,13 @@ export const fetchVegetable = (id, success) => {
   });
 };
 
-export const createVegetable = (vegetable, success) => {
+export const createVegetable = (vegetable, success, error) => {
   $.ajax({
     method: 'POST',
     url: 'api/vegetables',
     data: vegetable,
-    success
+    success,
+    error
   });
 };
 
@@ -31,14 +32,6 @@ export const deleteVegetable = (id, success) => {
     error: () => {
       console.log("deletion error in VegetableApiUtil#delete");
     }
-  });
-};
-
-export const editVegetable = (id, success) => {
-  $.ajax({
-    method: 'GET',
-    url: `api/vegetables/${id}`,
-    success
   });
 };
 

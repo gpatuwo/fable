@@ -4,7 +4,9 @@ export const VegetableConstants = {
   REQUEST_VEGETABLES: "REQUEST_VEGETABLES",
   REQUEST_VEGETABLE: "REQUEST_VEGETABLE",
   CREATE_VEGETABLE: "CREATE_VEGETABLE",
-  DELETE_VEGETABLE: "DELETE_VEGETABLE"
+  DELETE_VEGETABLE: "DELETE_VEGETABLE",
+  UPDATE_VEGETABLE: "UPDATE_VEGETABLE",
+  RECEIVE_ERRORS: "RECEIVE_VEG_ERRORS"
 };
 
 export const requestVegetables = () => ({
@@ -34,4 +36,15 @@ export const createVegetable = vegetable => ({
 export const deleteVegetable = id => ({
   type: VegetableConstants.DELETE_VEGETABLE,
   id
+});
+
+export const updateVegetable = (id, vegetable) => ({
+  type: VegetableConstants.UPDATE_VEGETABLE,
+  id,
+  vegetable
+});
+
+export const receiveErrors = errors => ({
+  type: VegetableConstants.RECEIVE_ERRORS,
+  errors
 });

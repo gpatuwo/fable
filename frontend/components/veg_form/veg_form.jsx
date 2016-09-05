@@ -57,18 +57,34 @@ class VegForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    console.log(this.props);
+    return(
+      <ul>
+        {this.props.errors.map( (error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+        ))}
+      </ul>
+    );
+  }
+
   render(){
     return(
       <div className="new-veg-container">
         <div className="new-veg-form">
           <h3 className="new-veg-title">Submit a New Vegetable</h3>
 
+          {this.props.errors ? this.renderErrors(): ""}
+
           <form onSubmit={this.handleSubmit}>
             <label className='veg-field'>Name</label>
             <br />
             <input type='string' value={this.state.name}
               onChange={this.update("name")}
-              className='veg-field'/>
+              className='veg-field'
+              />
             <br />
 
             <label className='veg-field'>Photo</label>

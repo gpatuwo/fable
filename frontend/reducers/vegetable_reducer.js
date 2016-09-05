@@ -12,6 +12,12 @@ const VegetablesReducer = (state = {}, action) => {
       let nextState = merge({}, state);
       delete nextState[action.id];
       return nextState;
+    case VegetableConstants.EDIT_VEGETABLE:
+      const updateVegetable = {[action.vegetable.id]: action.vegetable};
+      return merge({}, state, updateVegetable);
+    case VegetableConstants.RECEIVE_ERRORS:
+      const errors = action.errors;
+      return merge( {}, state, {errors});
     default:
       return state;
   }
