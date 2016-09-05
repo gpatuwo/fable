@@ -38,9 +38,8 @@ export const deleteVegetable = id => ({
   id
 });
 
-export const updateVegetable = (id, vegetable) => ({
+export const updateVegetable = vegetable => ({
   type: VegetableConstants.UPDATE_VEGETABLE,
-  id,
   vegetable
 });
 

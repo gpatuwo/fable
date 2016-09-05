@@ -8,13 +8,13 @@ const handleDelete = (deleteVegetable, router) => (
   }
 );
 
-const handleEdit = () => {
-
+const handleEdit = (veg, updateVegetable) => {
+  updateVegetable(veg);
 };
 
 const VegShow = ({veg, vegId,
   requestVegetable, deleteVegetable,
-  router, currentUser}) => {
+  router, currentUser, updateVegetable}) => {
   return(
     <div className="veg-show">
       <img className="veg-photo" src={veg.image}/>
