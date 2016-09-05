@@ -32,6 +32,20 @@ class Api::VegetablesController < ApplicationController
     end
   end
 
+  def edit
+    @vegetable = Vegetable.find(params[:id])
+    render "api/vegetables/edit"
+  end
+
+  def update
+    @vegetable = Vegetable.new(vegetable_params)
+    if @vegetable.save
+      render "api/vegetables/show"
+    else
+      render json: @vegetable.errors.full_messages
+    end
+  end
+
   private
   def vegetable_params
     params.require(:vegetable).permit(

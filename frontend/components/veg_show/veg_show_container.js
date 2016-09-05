@@ -7,10 +7,10 @@ from '../../actions/vegetable_actions.js';
 const mapStateToProps = (state, ownProps) => {
   const vegId = parseInt(ownProps.params.vegId);
   const veg = state.vegetables[vegId] || {};
-
   return {
     vegId,
-    veg
+    veg,
+    currentUser: state.session.currentUser
   };
 };
 

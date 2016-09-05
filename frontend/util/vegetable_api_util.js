@@ -33,3 +33,20 @@ export const deleteVegetable = (id, success) => {
     }
   });
 };
+
+export const editVegetable = (id, success) => {
+  $.ajax({
+    method: 'GET',
+    url: `api/vegetables/${id}`,
+    success
+  });
+};
+
+export const updateVegetable = (id, vegetable, success) => {
+  $.ajax({
+    method: 'PATCH',
+    url: `api/vegetables/${id}`,
+    data: vegetable,
+    success
+  });
+};
