@@ -22,6 +22,7 @@ export default ({getState, dispatch}) => next => action => {
     dispatch(receiveVegetables(data));
   };
   const vegetableSuccess = data => {
+    console.log(data);
     dispatch(receiveVegetable(data));
     hashHistory.push(`/vegetables/${data.id}`);
   };
@@ -46,7 +47,8 @@ export default ({getState, dispatch}) => next => action => {
       deleteVegetable(action.id, () => next(action));
       break;
     case VegetableConstants.UPDATE_VEGETABLE:
-      updateVegetable(action.vegetable, vegetableSuccess, errorCallback);
+      updateVegetable(action.id, action.vegetable,
+         vegetableSuccess, errorCallback);
       break;
     default:
       break;

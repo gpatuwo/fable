@@ -23,7 +23,6 @@ class VegForm extends React.Component {
       name: "",
       description: "",
       image: ""
-
     };
     Months.forEach( (month)=> {this.state[month] = false;});
 

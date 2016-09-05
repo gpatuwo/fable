@@ -8,9 +8,12 @@ const handleDelete = (deleteVegetable, router) => (
   }
 );
 
-const handleEdit = (veg, updateVegetable) => {
-  updateVegetable(veg);
-};
+const handleEdit = (vegId, veg, updateVegetable) => (
+  () => {
+    updateVegetable(vegId, {vegetable:veg});
+  }
+);
+
 
 const VegShow = ({veg, vegId,
   requestVegetable, deleteVegetable,
@@ -24,7 +27,7 @@ const VegShow = ({veg, vegId,
       </p>
       { currentUser ?
         (<div className='veg-show-buttons'>
-          <button onClick={handleEdit()}>
+          <button onClick={handleEdit(vegId, veg, updateVegetable)}>
             Edit veg
           </button>
           <button onClick={handleDelete(deleteVegetable, router)}>

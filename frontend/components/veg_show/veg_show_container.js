@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => ({
   requestVegetable: id => dispatch(requestVegetable(id)),
   deleteVegetable: () => dispatch(deleteVegetable(ownProps.params.vegId)),
-  updateVegetable: vegetable => dispatch(updateVegetable(vegetable))
+  updateVegetable: (id, vegetable) => dispatch(updateVegetable(id, vegetable))
 });
 
 export default connect(

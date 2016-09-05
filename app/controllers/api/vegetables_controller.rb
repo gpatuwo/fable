@@ -38,8 +38,8 @@ class Api::VegetablesController < ApplicationController
   end
 
   def update
-    @vegetable = Vegetable.new(vegetable_params)
-    if @vegetable.save
+    @vegetable = Vegetable.find(params[:id])
+    if @vegetable.update(vegetable_params)
       render "api/vegetables/show"
     else
       render json: @vegetable.errors.full_messages
