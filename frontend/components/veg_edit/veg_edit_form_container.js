@@ -3,7 +3,6 @@ import VegEditForm from './veg_edit_form.jsx';
 import { updateVegetable } from '../../actions/vegetable_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const vegId = parseInt(ownProps.params.vegId);
   const vegetable = state.vegetables[vegId] || {};
   return {

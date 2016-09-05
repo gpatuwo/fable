@@ -51,6 +51,19 @@
   width: 33%;
 }
 
+.veg-index-grid {
+  padding: 20px;
+  margin: 0px;
+}
+
+.veg-photo {
+  display: block;
+  max-width: inherit;
+  height: auto;
+  width: auto\9;
+  -ms-interpolation-mode: bicubic;
+}
+
 .veg-index-item {
   position: relative;
   display: inline-block;
@@ -58,10 +71,8 @@
   width: calc(50% - 4px);
   margin-right: 8px;
   font-size: 600%;
-}
-
-.veg-index-item:nth-of-type(2n){
-  margin-right: 0;
+  max-height: 590px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 50em) {
@@ -80,10 +91,10 @@
 
 .veg-grid-name {
   position: absolute;
-  top: 29px;
+  top: 43px;
   width: 100%;
   color: white;
-  font-size: inherit;
+  font-size: 85%;
   text-align: center;
 }
 
