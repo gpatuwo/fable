@@ -22,7 +22,6 @@ export default ({getState, dispatch}) => next => action => {
     dispatch(receiveVegetables(data));
   };
   const vegetableSuccess = data => {
-    console.log(data);
     dispatch(receiveVegetable(data));
     hashHistory.push(`/vegetables/${data.id}`);
   };

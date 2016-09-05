@@ -8,16 +8,16 @@ const handleDelete = (deleteVegetable, router) => (
   }
 );
 
-const handleEdit = (vegId, veg, updateVegetable) => (
+const handleEdit = (vegId, router) => (
   () => {
-    updateVegetable(vegId, {vegetable:veg});
+    router.push(`vegetables/${vegId}/edit`);
   }
 );
 
 
 const VegShow = ({veg, vegId,
   requestVegetable, deleteVegetable,
-  router, currentUser, updateVegetable}) => {
+  router, currentUser}) => {
   return(
     <div className="veg-show">
       <img className="veg-photo" src={veg.image}/>
@@ -27,7 +27,7 @@ const VegShow = ({veg, vegId,
       </p>
       { currentUser ?
         (<div className='veg-show-buttons'>
-          <button onClick={handleEdit(vegId, veg, updateVegetable)}>
+          <button onClick={handleEdit(vegId, router)}>
             Edit veg
           </button>
           <button onClick={handleDelete(deleteVegetable, router)}>
