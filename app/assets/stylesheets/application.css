@@ -54,12 +54,13 @@
   font-size: 14px;
 }
 
-.veg-show {
+.page-show {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 33%;
+  width: 60%;
+  text-align: justify;
 }
 
 p {
@@ -111,6 +112,12 @@ p {
   color: white;
   font-size: 65%;
   text-align: center;
+}
+
+.veg-photo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .veg-name {

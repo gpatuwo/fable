@@ -18,7 +18,7 @@ const VegShow = ({veg, vegId,
   requestVegetable, deleteVegetable,
   router, currentUser}) => {
   return(
-    <div className="veg-show">
+    <div className="page-show">
       <img className="veg-photo" src={veg.image}/>
       <h2 className="veg-name">{veg.name && veg.name.toLowerCase()}</h2>
       <p className="veg-description">

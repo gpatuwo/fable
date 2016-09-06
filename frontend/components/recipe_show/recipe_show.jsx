@@ -18,10 +18,10 @@ const RecipeShow = ({recipe, recipeId,
   requestRecipe, deleteRecipe,
   router, currentUser}) => {
   return(
-    <div className="recipe-show">
+    <div className="page-show">
       <h2 className="recipe-title">{recipe.title}</h2>
       <h4 className="recipe-author">{recipe.author_name}</h4>
-      <img className="recipe-photo" src={recipe.image}/>
+      <img className="page-photo" src={recipe.image}/>
       <p className="recipe-ingredients">
         {recipe.ingredients}
       </p>
