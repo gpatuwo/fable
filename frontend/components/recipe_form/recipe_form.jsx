@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 
-class VegForm extends React.Component {
+class RecipeForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,7 +9,7 @@ class VegForm extends React.Component {
       image: "",
       ingredients: "",
       instructions: "",
-      author_id: this.props.currentUser()
+      author_id: props.currentUser.id
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,6 +20,7 @@ class VegForm extends React.Component {
   update(property){
       return e => this.setState({[property]: e.target.value});
   }
+
 
   handleSubmit(e){
     e.preventDefault();
@@ -43,7 +44,6 @@ class VegForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props);
     return(
       <ul>
         {this.props.errors.map( (error, i) => (
@@ -57,56 +57,45 @@ class VegForm extends React.Component {
 
   render(){
     return(
-      <div className="new-veg-container">
-        <div className="new-veg-form">
-          <h3 className="new-veg-title">Submit a New Recipe</h3>
+      <div className="new-recipe-container">
+        <div className="new-recipe-form">
+          <h3 className="new-recipe-title">Submit a New Recipe</h3>
 
           {this.props.errors ? this.renderErrors(): ""}
 
           <form onSubmit={this.handleSubmit}>
-            <label className='veg-field'>Name</label>
+            <label className='recipe-field'>Title</label>
             <br />
-            <input type='string' value={this.state.name}
-              onChange={this.update("name")}
-              className='veg-field'
+            <input type='string' value={this.state.title}
+              onChange={this.update("title")}
+              className='recipe-field'
               />
             <br />
 
-            <label className='veg-field'>Photo</label>
+            <label className='recipe-field'>Photo</label>
             <br />
             {this.state.image ?
               ( <img src={this.state.image}/>) :
-              ( <button className='new-veg-photo'
+              ( <button className='new-recipe-photo'
               onClick={this.uploadPhoto}>Upload photo</button> )
             }
             <br />
 
-            <label className='veg-field'>Description</label>
+            <label className='recipe-field'>Ingredients</label>
             <br />
-            <textarea rows="10" cols="70" value={this.state.description}
-                onChange={this.update("description")}
-                className='veg-field'/>
-
-            <div>
-              <label className='veg-field'>In Season?</label>
-              <br />
-              { Months.map( (month) => (
-                <label key={month}>
-                  {month}
-                  <input type='checkbox' value={this.state[month]}
-                    onChange={this.updateCheckbox(month)}
-                    className='veg-field'
-                    checked={this.state[month]}/>
-                  <br />
-                </label>
-              ))}
-            </div>
-
-
+            <textarea rows="10" cols="100" value={this.state.ingredients}
+                onChange={this.update("ingredients")}
+                className='recipe-field'/>
+            <br />
+            <label className='recipe-field'>Instructions</label>
+            <br />
+            <textarea rows="20" cols="100" value={this.state.instructions}
+                onChange={this.update("instructions")}
+                className='recipe-field'/>
             <div className='button-holder'>
               <input type='submit'
-                value="Submit Veg"
-                className="new-veg-button"/>
+                value="Submit Recipe"
+                className="new-recipe-button"/>
             </div>
           </form>
 
@@ -117,4 +106,4 @@ class VegForm extends React.Component {
 
 }
 
-export default withRouter(VegForm);
+export default withRouter(RecipeForm);

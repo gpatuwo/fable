@@ -1,0 +1,39 @@
+// Place all the styles related to the vegetables controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-veg-form {
+  float: left;
+  margin: 50px 100px;
+}
+
+.veg-field-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.veg-field {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.veg-show {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 33%;
+}
+
+p {
+  white-space: pre-wrap;
+}
+
+.veg-name {
+  position: absolute;
+  top: 29px;
+  width: 100%;
+  color: white;
+  font-size: 600%;
+  text-align: center;
+}

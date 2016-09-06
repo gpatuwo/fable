@@ -17,7 +17,6 @@ const handleEdit = (recipeId, router) => (
 const RecipeShow = ({recipe, recipeId,
   requestRecipe, deleteRecipe,
   router, currentUser}) => {
-    console.log(recipe);
   return(
     <div className="recipe-show">
       <h2 className="recipe-title">{recipe.title}</h2>
