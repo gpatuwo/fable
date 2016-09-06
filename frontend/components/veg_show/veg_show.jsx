@@ -25,7 +25,7 @@ const VegShow = ({veg, vegId,
       <p className="veg-description">
         {veg.description}
       </p>
-      { currentUser ?
+      { currentUser.username === "Grace" ?
         (<div className='veg-show-buttons'>
           <button onClick={handleEdit(vegId, router)}>
             Edit veg
