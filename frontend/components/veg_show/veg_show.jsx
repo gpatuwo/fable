@@ -14,7 +14,6 @@ const handleEdit = (vegId, router) => (
   }
 );
 
-
 const VegShow = ({veg, vegId,
   requestVegetable, deleteVegetable,
   router, currentUser}) => {
