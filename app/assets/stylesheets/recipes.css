@@ -1,0 +1,22 @@
+.recipe-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.recipe-author {
+  color: grey;
+}
+
+.recipe-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe-ingredients {
+
+}
+
+.recipe-instructions {
+
+}

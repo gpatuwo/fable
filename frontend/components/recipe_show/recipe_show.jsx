@@ -20,15 +20,17 @@ const RecipeShow = ({recipe, recipeId,
   return(
     <div className="page-show">
       <h2 className="recipe-title">{recipe.title}</h2>
-      <h4 className="recipe-author">{recipe.author_name}</h4>
-      <img className="page-photo" src={recipe.image}/>
+      <h4 className="recipe-author">by {recipe.author_name}</h4>
+      <img className="recipe-photo" src={recipe.image}/>
       <p className="recipe-ingredients">
         {recipe.ingredients}
       </p>
       <p className="recipe-instructions">
         {recipe.instructions}
       </p>
-      { currentUser ?
+      { currentUser &&
+        (currentUser.username === "Grace" ||
+         currentUser.id === recipe.author_id) ?
         (<div className='recipe-show-buttons'>
           <button onClick={handleEdit(recipeId, router)}>
             Edit recipe

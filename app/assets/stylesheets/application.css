@@ -128,3 +128,23 @@ p {
   font-size: 600%;
   text-align: center;
 }
+
+.recipe-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.recipe-author {
+  color: grey;
+  text-align: center;
+}
+
+.recipe-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe-ingredients {
+  
+}
