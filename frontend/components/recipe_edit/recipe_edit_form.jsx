@@ -1,18 +1,11 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 
-class RecipeForm extends React.Component {
+class RecipeEditForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: "",
-      image: "",
-      ingredients: "",
-      instructions: "",
-      author_id: props.currentUser.id
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = props.recipe;
+    this.handleUpdate = this.handleUpdate.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
   }
 
@@ -22,10 +15,11 @@ class RecipeForm extends React.Component {
   }
 
 
-  handleSubmit(e){
+  handleUpdate(e){
     e.preventDefault();
     const recipe = Object.assign({}, this.state);
-    this.props.createRecipe({recipe});
+    const recipeId = this.state.id;
+    this.props.updateRecipe(recipeId, {recipe});
   }
 
   uploadPhoto(e) {
@@ -55,11 +49,11 @@ class RecipeForm extends React.Component {
     return(
       <div className="new-recipe-container">
         <div className="new-recipe-form">
-          <h3 className="new-recipe-title">Submit a New Recipe</h3>
+          <h3 className="new-recipe-title">Edit This Recipe</h3>
 
           {this.props.errors ? this.renderErrors(): ""}
 
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleUpdate}>
             <label className='recipe-field'>Title</label>
             <br />
             <input type='string' value={this.state.title}
@@ -88,6 +82,7 @@ class RecipeForm extends React.Component {
             <textarea rows="20" cols="100" value={this.state.instructions}
                 onChange={this.update("instructions")}
                 className='recipe-field'/>
+
             <div className='button-holder'>
               <input type='submit'
                 value="Submit Recipe"
@@ -102,4 +97,4 @@ class RecipeForm extends React.Component {
 
 }
 
-export default withRouter(RecipeForm);
+export default withRouter(RecipeEditForm);
