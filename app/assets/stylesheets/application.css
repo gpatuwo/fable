@@ -61,16 +61,16 @@
   width: 33%;
 }
 
-p.veg-description {
-    white-space: pre-wrap;
+p {
+  white-space: pre-wrap;
 }
 
-.veg-index-grid {
+.index-grid {
   padding: 20px;
   margin: 0px;
 }
 
-.veg-index-photo {
+.index-photo {
   display: block;
   max-width: inherit;
   height: auto;
@@ -78,7 +78,7 @@ p.veg-description {
   -ms-interpolation-mode: bicubic;
 }
 
-.veg-index-item {
+.index-item {
   position: relative;
   display: inline-block;
   margin-bottom: 8px;
@@ -90,20 +90,20 @@ p.veg-description {
 }
 
 @media screen and (min-width: 50em) {
-  .veg-index-item {
+  .index-item {
     width: calc(25% - 6px);
   }
 
-  .veg-index-item:nth-of-type(2n) {
+  .index-item:nth-of-type(2n) {
     margin-right: 8px;
   }
 
-  .veg-index-item:nth-of-type(4n) {
+  .index-item:nth-of-type(4n) {
     margin-right: 0;
   }
 }
 
-.veg-grid-name {
+.grid-name {
   position: absolute;
   top: 73px;
   width: 100%;

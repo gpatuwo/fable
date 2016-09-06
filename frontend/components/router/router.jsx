@@ -9,7 +9,9 @@ import VegFormContainer from '../veg_form/veg_form_container.js';
 import VegShowContainer from '../veg_show/veg_show_container.js';
 import VegEditFormContainer from '../veg_edit/veg_edit_form_container.js';
 import VegIndexContainer from '../veg_index/veg_index_container.js';
-import VegIndexFilteredContainer from '../veg_index/veg_index_filtered_container.js';
+import VegIndexFilteredContainer from
+ '../veg_index/veg_index_filtered_container.js';
+import RecipeIndexContainer from '../recipe_index/recipe_index_container.js';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -17,6 +19,7 @@ class AppRouter extends React.Component{
     this._ensureLoggedIn = this._ensureLoggedIn.bind(this);
     this._redirectIfLoggedIn = this._redirectIfLoggedIn.bind(this);
     this.vegetables = this.vegetables.bind(this);
+    this.recipes = this.recipes.bind(this);
   }
 
   _ensureLoggedIn(nextState, replace){
@@ -35,6 +38,10 @@ class AppRouter extends React.Component{
 
   vegetables(){
     this.props.fetchVegetables();
+  }
+
+  recipes(){
+    this.props.fetchRecipes();
   }
 
   render(){
@@ -62,6 +69,10 @@ class AppRouter extends React.Component{
             <Route path=":vegId/edit"
               component={VegEditFormContainer}/>
           </Route>
+          <Route path="recipes"
+            onEnter={this.recipes}>
+            <IndexRoute component={RecipeIndexContainer}/>
+          </Route>)
         </Route>
       </Router>
     );

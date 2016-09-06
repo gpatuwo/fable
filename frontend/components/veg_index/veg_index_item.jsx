@@ -6,10 +6,10 @@ const handleClick = (router, url) => (
 );
 
 const VegIndexItem = ({vegetable, router}) => (
-    <li className="veg-index-item"
+    <li className="index-item"
       onClick={handleClick(router,  `vegetables/${vegetable.id}`)}>
-      <img className="veg-index-photo" src={vegetable.image}/>
-      <h2 className="veg-grid-name">
+      <img className="index-photo" src={vegetable.image}/>
+      <h2 className="grid-name">
         {vegetable.name && vegetable.name.toLowerCase()}</h2>
     </li>
 

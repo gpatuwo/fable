@@ -253,7 +253,7 @@ Sea salt and freshly ground black pepper
 Juice and zest from 1/2 lemon, plus more to taste
 A few sprigs of fresh thyme, leaves picked",
 instructions: "
-1. First, light your charcoal barbecue or fire. Wash the beets and snip off the greens, reserving them. Fold a large piece of foil -- about 12-18" (24-36" unfolded), depending on the size of your beets -- in half to form a double layer. Lay the greens, then the beets, then the rosemary on top of the foil. (Note: if you don't have greens with your beets -- or want to save them to cook separately -- that's okay, just make sure the coals are at medium heat, not flaming, when you add your packet of beets.)
+1. First, light your charcoal barbecue or fire. Wash the beets and snip off the greens, reserving them. Fold a large piece of foil -- about 12-18in or 24-36in unfolded, depending on the size of your beets -- in half to form a double layer. Lay the greens, then the beets, then the rosemary on top of the foil. *Note: if you don't have greens with your beets -- or want to save them to cook separately -- that's okay, just make sure the coals are at medium heat, not flaming, when you add your packet of beets.
 
 2. Roll up the foil, folding in the edges and twisting the ends together. Stab the foil a few times all over with a knife to allow the smoke to get inside and flavor the beets. Lift the rack of your barbecue with tongs and carefully insert your foil package among the coals, making sure you place some coals on top too.
 

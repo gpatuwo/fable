@@ -3,8 +3,8 @@ import VegIndexItem from './veg_index_item.jsx';
 
 const VegIndex = ({vegetables}) => {
   return (
-    <section className="veg-index-grid">
-      <ul className="veg-index-grid">
+    <section className="index-grid">
+      <ul className="index-grid">
         {vegetables && Object.keys(vegetables).map(
           (vegId) => {
           return (<VegIndexItem key={vegId} vegetable={vegetables[vegId]}/>);

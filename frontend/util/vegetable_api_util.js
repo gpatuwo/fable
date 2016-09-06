@@ -2,7 +2,9 @@ export const fetchVegetables = (success) => {
   $.ajax({
     method: 'GET',
     url: 'api/vegetables',
-    success
+    success,
+    error: () => {
+      console.log("fetch error in VegetableApiUtil#fetch");}
   });
 };
 
