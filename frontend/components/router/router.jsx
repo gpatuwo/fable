@@ -12,6 +12,7 @@ import VegIndexContainer from '../veg_index/veg_index_container.js';
 import VegIndexFilteredContainer from
  '../veg_index/veg_index_filtered_container.js';
 import RecipeIndexContainer from '../recipe_index/recipe_index_container.js';
+import RecipeShowContainer from '../recipe_show/recipe_show_container.js';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -72,6 +73,8 @@ class AppRouter extends React.Component{
           <Route path="recipes"
             onEnter={this.recipes}>
             <IndexRoute component={RecipeIndexContainer}/>
+            <Route path=":recipeId"
+              component={RecipeShowContainer}/>
           </Route>)
         </Route>
       </Router>
