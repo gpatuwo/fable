@@ -102,7 +102,7 @@ class VegEditForm extends React.Component {
               { Months.map( (month) => (
                 <label key={month}>
                   {month}
-                  <input type='checkbox' value={this.state[month] ? "on": "off"}
+                  <input type='checkbox' value={this.state[month]}
                     onChange={this.updateCheckbox(month)}
                     className='veg-field'
                     checked={this.state[month]}/>
