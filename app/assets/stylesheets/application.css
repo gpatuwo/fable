@@ -61,6 +61,10 @@
   width: 33%;
 }
 
+p.veg-description {
+    white-space: pre-wrap;
+}
+
 .veg-index-grid {
   padding: 20px;
   margin: 0px;
