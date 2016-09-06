@@ -4,6 +4,9 @@ import VegIndexItem from './veg_index_item.jsx';
 const VegIndexFiltered = ({vegetables, children}) => {
   return (
     <section className="veg-index-grid">
+      <h1 className="index-header">
+        Here are the vegetables in season this month:
+      </h1>
       <ul className="veg-index-grid">
         {vegetables && Object.keys(vegetables).map(
           (vegId) => {

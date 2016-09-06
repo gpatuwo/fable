@@ -9,6 +9,7 @@ import VegFormContainer from '../veg_form/veg_form_container.js';
 import VegShowContainer from '../veg_show/veg_show_container.js';
 import VegEditFormContainer from '../veg_edit/veg_edit_form_container.js';
 import VegIndexContainer from '../veg_index/veg_index_container.js';
+import VegIndexFilteredContainer from '../veg_index/veg_index_filtered_container.js';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -42,6 +43,8 @@ class AppRouter extends React.Component{
         <Route path="/"
           onEnter={this.vegetables}
           component={ App }>
+          <IndexRoute
+            component={VegIndexFilteredContainer}/>
           <Route path="login"
             component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>
