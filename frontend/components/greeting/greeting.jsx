@@ -15,6 +15,8 @@ const personalGreeting = (currentUser, router, logout) => (
     <button className='header-button'
       onClick={ () => router.push("/recipes")}>All Recipes</button>
     <button className='header-button'
+      onClick={ () => router.push("/recipes/new")}>New Recipe</button>
+    <button className='header-button'
       onClick={ () => router.push("/vegetables")}>All Veg</button>
     <button className='header-button'
       onClick={ () => router.push("/vegetables/new")}>New Veg</button>

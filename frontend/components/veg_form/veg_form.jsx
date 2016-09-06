@@ -71,45 +71,45 @@ class VegForm extends React.Component {
 
   render(){
     return(
-      <div className="new-veg-container">
-        <div className="new-veg-form">
-          <h3 className="new-veg-title">Submit a New Vegetable</h3>
+      <div className="new-form-container">
+        <div className="new-form">
+          <h3 className="new-form-title">Submit a New Vegetable</h3>
 
           {this.props.errors ? this.renderErrors(): ""}
 
           <form onSubmit={this.handleSubmit}>
-            <label className='veg-field'>Name</label>
+            <label className='form-field-title'>Name</label>
             <br />
             <input type='string' value={this.state.name}
               onChange={this.update("name")}
-              className='veg-field'
+              className='form-field'
               />
             <br />
 
-            <label className='veg-field'>Photo</label>
+            <label className='form-field'>Photo</label>
             <br />
             {this.state.image ?
               ( <img src={this.state.image}/>) :
-              ( <button className='new-veg-photo'
+              ( <button className='new-form-photo'
               onClick={this.uploadPhoto}>Upload photo</button> )
             }
             <br />
 
-            <label className='veg-field'>Description</label>
+            <label className='form-field'>Description</label>
             <br />
             <textarea rows="10" cols="70" value={this.state.description}
                 onChange={this.update("description")}
-                className='veg-field'/>
+                className='form-field'/>
 
             <div>
-              <label className='veg-field'>In Season?</label>
+              <label className='form-field'>In Season?</label>
               <br />
               { Months.map( (month) => (
                 <label key={month}>
                   {month}
                   <input type='checkbox' value={this.state[month]}
                     onChange={this.updateCheckbox(month)}
-                    className='veg-field'
+                    className='form-field'
                     checked={this.state[month]}/>
                   <br />
                 </label>

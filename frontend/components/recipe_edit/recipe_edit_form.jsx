@@ -47,41 +47,41 @@ class RecipeEditForm extends React.Component {
 
   render(){
     return(
-      <div className="new-recipe-container">
-        <div className="new-recipe-form">
-          <h3 className="new-recipe-title">Edit This Recipe</h3>
+      <div className="new-form-container">
+        <div className="new-form">
+          <h3 className="new-form-title">Edit This Recipe</h3>
 
           {this.props.errors ? this.renderErrors(): ""}
 
           <form onSubmit={this.handleUpdate}>
-            <label className='recipe-field'>Title</label>
+            <label className='form-field-title'>Title</label>
             <br />
             <input type='string' value={this.state.title}
               onChange={this.update("title")}
-              className='recipe-field'
+              className='form-field'
               />
             <br />
 
-            <label className='recipe-field'>Photo</label>
+            <label className='form-field-title'>Photo</label>
             <br />
             {this.state.image ?
               ( <img src={this.state.image}/>) :
-              ( <button className='new-recipe-photo'
+              ( <button className='new-form-photo'
               onClick={this.uploadPhoto}>Upload photo</button> )
             }
             <br />
 
-            <label className='recipe-field'>Ingredients</label>
+            <label className='form-field-title'>Ingredients</label>
             <br />
             <textarea rows="10" cols="100" value={this.state.ingredients}
                 onChange={this.update("ingredients")}
-                className='recipe-field'/>
+                className='form-field'/>
             <br />
-            <label className='recipe-field'>Instructions</label>
+            <label className='form-field-title'>Instructions</label>
             <br />
             <textarea rows="20" cols="100" value={this.state.instructions}
                 onChange={this.update("instructions")}
-                className='recipe-field'/>
+                className='form-field'/>
 
             <div className='button-holder'>
               <input type='submit'
