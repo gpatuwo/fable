@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import GreetingContainer from './greeting/greeting_container';
+import VegIndexFiltered from './veg_index/veg_index_filtered_container.js';
 
 const App = ({children}) => (
   <div>
@@ -10,7 +11,11 @@ const App = ({children}) => (
       </Link>
       <GreetingContainer/>
     </header>
+    <section>
+      <VegIndexFiltered/>
+    </section>
     {children}
+
   </div>
 );
 

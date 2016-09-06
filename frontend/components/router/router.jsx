@@ -39,8 +39,9 @@ class AppRouter extends React.Component{
   render(){
     return(
       <Router history={ hashHistory }>
-        <Route path="/" component={ App }>
-
+        <Route path="/"
+          onEnter={this.vegetables}
+          component={ App }>
           <Route path="login"
             component={ SessionFormContainer }
             onEnter={this._redirectIfLoggedIn}/>

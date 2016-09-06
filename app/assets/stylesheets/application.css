@@ -66,7 +66,7 @@
   margin: 0px;
 }
 
-.veg-photo {
+.veg-index-photo {
   display: block;
   max-width: inherit;
   height: auto;
@@ -81,7 +81,7 @@
   width: calc(50% - 4px);
   margin-right: 8px;
   font-size: 600%;
-  max-height: 590px;
+  max-height: 393px;
   overflow: hidden;
 }
 
@@ -104,7 +104,7 @@
   top: 73px;
   width: 100%;
   color: white;
-  font-size: 85%;
+  font-size: 65%;
   text-align: center;
 }
 
