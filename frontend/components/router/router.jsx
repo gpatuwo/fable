@@ -15,6 +15,7 @@ import RecipeIndexContainer from '../recipe_index/recipe_index_container.js';
 import RecipeShowContainer from '../recipe_show/recipe_show_container.js';
 import RecipeFormContainer from '../recipe_form/recipe_form_container.js';
 
+
 class AppRouter extends React.Component{
   constructor(props){
     super(props);
@@ -79,6 +80,7 @@ class AppRouter extends React.Component{
               onEnter={this._ensureLoggedIn}/>
             <Route path=":recipeId"
               component={RecipeShowContainer}/>
+
           </Route>)
         </Route>
       </Router>
