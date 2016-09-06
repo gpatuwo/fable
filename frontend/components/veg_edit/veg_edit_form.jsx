@@ -20,9 +20,7 @@ class VegEditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.vegetable;
-    Months.forEach( (month)=> {this.state[month] = false;});
-
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
   }
 
@@ -34,7 +32,7 @@ class VegEditForm extends React.Component {
   handleUpdate(e){
     e.preventDefault();
     const vegetable = Object.assign({}, this.state);
-    const vegId = Object.assign({}, this.state.id);
+    const vegId = this.state.id;
     this.props.updateVegetable(vegId, {vegetable});
   }
 
@@ -70,12 +68,12 @@ class VegEditForm extends React.Component {
     return(
       <div className="new-veg-container">
         <div className="new-veg-form">
-          <h3 className="new-veg-title">Submit a New Vegetable</h3>
+          <h2 className="new-veg-title">Edit This Vegetable</h2>
 
           {this.props.errors ? this.renderErrors(): ""}
 
           <form onSubmit={this.handleUpdate}>
-            <label className='veg-field'>Name</label>
+            <label className='veg-field-title'>Name</label>
             <br />
             <input type='string' value={this.state.name}
               onChange={this.update("name")}
@@ -83,7 +81,7 @@ class VegEditForm extends React.Component {
               />
             <br />
 
-            <label className='veg-field'>Photo</label>
+            <label className='veg-field-title'>Photo</label>
             <br />
             {this.state.image ?
               ( <img src={this.state.image}/>) :
@@ -92,19 +90,19 @@ class VegEditForm extends React.Component {
             }
             <br />
 
-            <label className='veg-field'>Description</label>
+            <label className='veg-field-title'>Description</label>
             <br />
             <textarea rows="10" cols="70" value={this.state.description}
                 onChange={this.update("description")}
                 className='veg-field'/>
 
             <div>
-              <label className='veg-field'>In Season?</label>
+              <label className='veg-field-title'>In Season?</label>
               <br />
               { Months.map( (month) => (
                 <label key={month}>
                   {month}
-                  <input type='checkbox' value={this.state[month]}
+                  <input type='checkbox' value={this.state[month] ? "on": "off"}
                     onChange={this.updateCheckbox(month)}
                     className='veg-field'
                     checked={this.state[month]}/>

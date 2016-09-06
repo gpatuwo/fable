@@ -43,6 +43,16 @@
   margin: 50px 100px;
 }
 
+.veg-field-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.veg-field {
+  padding: 5px;
+  font-size: 14px;
+}
+
 .veg-show {
   position: relative;
   display: block;
@@ -91,7 +101,7 @@
 
 .veg-grid-name {
   position: absolute;
-  top: 43px;
+  top: 73px;
   width: 100%;
   color: white;
   font-size: 85%;
