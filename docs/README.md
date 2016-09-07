@@ -10,7 +10,7 @@ Heroku link: http://fable-food.herokuapp.com/
 Fable provides farm-to-table recipes for what's at farmers markets this week in the Bay Area. The design of the site will rely on a clean grid format (like Pinterest's) but will be more similar in concept to [Food52](https://food52.com/recipes). This app will be built using Ruby on Rails and React/Redux with the following features:
 
  - New account creation, login and guest account
- - Infinite Scroll
+ - Vegetable upload/edit
  - Comments
  - Autocomplete search
  - Recipe upload/edit

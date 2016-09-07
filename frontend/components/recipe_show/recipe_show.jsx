@@ -25,6 +25,7 @@ const RecipeShow = ({recipe, recipeId,
       <p className="recipe-ingredients">
         {recipe.ingredients}
       </p>
+      <br />
       <p className="recipe-instructions">
         {recipe.instructions}
       </p>

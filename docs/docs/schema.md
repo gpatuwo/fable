@@ -48,6 +48,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 recipe_id   | integer   | not null, foreign key (references recipes), indexed
 veg_id      | integer   | not null, foreign key (references vegetables), indexed
+tag_name    | string    | not null
 
 ## tags (bonus)
 column name | data type | details
