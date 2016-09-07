@@ -12,7 +12,7 @@
 
 class User < ActiveRecord::Base
   attr_reader :password
-
+  has_many :taggings 
   has_many :recipes, foreign_key: :author_id
 
   validates :username, :password_digest, :session_token, presence: true

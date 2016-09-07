@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
   componentDidUpdate(){
@@ -37,6 +38,12 @@ class SessionForm extends React.Component {
     } else {
       return <Link to='/login'>log in instead</Link>;
     }
+  }
+
+  handleGuest(e){
+    e.preventDefault();
+    const user = {username: "Guest", password: "password"};
+    this.props.login({user});
   }
 
   renderErrors(){
@@ -78,6 +85,7 @@ class SessionForm extends React.Component {
 
             <br />
             <input type="submit" value="Submit" />
+            <input type="button" onClick={this.handleGuest} value="Guest Account"/>
 
           </div>
         </form>
