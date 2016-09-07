@@ -9,13 +9,19 @@ class RecipeForm extends React.Component {
       image: "",
       ingredients: "",
       instructions: "",
-      author_id: props.currentUser.id
+      author_id: props.currentUser.id,
+      vegetables: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
   }
 
+  componentDidMount(){
+    if (this.props.vegetable == {}) {
+      this.props.fetchVegetables();
+    }
+  }
 
   update(property){
       return e => this.setState({[property]: e.target.value});
@@ -51,6 +57,10 @@ class RecipeForm extends React.Component {
     );
   }
 
+  updateCheckbox(){
+    return () => { console.log("checked");};
+  }
+
   render(){
     return(
       <div className="new-form-container">
@@ -83,6 +93,24 @@ class RecipeForm extends React.Component {
                 onChange={this.update("ingredients")}
                 className='form-field'/>
             <br />
+            <label className='form-field-title'>
+              Which vegetables do you want to add this recipe to?</label>
+            {Object.keys(this.props.vegetables).map(
+              (vegId) => {
+                const vegName = this.props.vegetables[vegId].name;
+
+                return (
+                  <label key={vegId}>
+                    {vegName}
+                    <input type="checkbox"
+                      value={vegName}
+                      onChange={this.updateCheckbox(vegId)}
+                      className="form-field"
+                      checked={this.state.vegetables.includes(vegName)}/>
+                  </label>
+                );
+              }
+            )}
             <label className='form-field-title'>Instructions</label>
             <br />
             <textarea rows="20" cols="100" value={this.state.instructions}

@@ -1,10 +1,5 @@
 class Api::TaggingsController < ApplicationController
 
-  def new
-    @recipe = Recipe.find(params[:recipe_id])
-    @tagging = Tagging.new(tag_params)
-  end
-
   def create
     @tagging = Tagging.new(tag_params)
     unless @tagging.save

@@ -3,10 +3,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     resources :vegetables
-    resources :recipes do
-      resources :taggings, only: [:new]
-    end
-    
+    resources :recipes
     resources :taggings, only: [:create, :destroy]
   end
 

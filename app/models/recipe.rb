@@ -14,7 +14,7 @@
 
 class Recipe < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
-  has_many :vegetables, :through => :taggings
+  has_many :vegetables, through: :taggings, source: :vegetable
 
   validates :title, :image, :ingredients, :instructions, :author_id, presence: true
 

@@ -24,7 +24,7 @@
 
 class Vegetable < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
-  has_many :recipes, :through => :taggings
+  has_many :recipes, through: :taggings, source: :recipe
 
   validates :name, :description, presence: true
 

@@ -20,8 +20,9 @@ const RecipeShow = ({recipe, recipeId,
   return(
     <div className="page-show">
       <h2 className="recipe-title">{recipe.title}</h2>
-      <h4 className="recipe-author">by {recipe.author_name}</h4>
+      <h4 className="recipe-author"><em>by</em> {recipe.author_name}</h4>
       <img className="recipe-photo" src={recipe.image}/>
+      <p className="recipe-tags">{recipe.vegetables}</p>
       <p className="recipe-ingredients">
         {recipe.ingredients}
       </p>

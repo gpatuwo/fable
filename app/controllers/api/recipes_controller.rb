@@ -53,6 +53,7 @@ class Api::RecipesController < ApplicationController
       :image,
       :ingredients,
       :instructions,
-      :author_id)
+      :author_id,
+      :vegetables)
   end
 end

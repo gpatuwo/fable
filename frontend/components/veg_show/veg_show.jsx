@@ -34,6 +34,9 @@ const VegShow = ({veg, vegId,
           </button>
         </div>
       ) : ""}
+      <div className="veg-recipes">
+        {veg.recipes}
+      </div>
     </div>
   );
 };
