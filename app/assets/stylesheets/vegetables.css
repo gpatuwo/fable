@@ -1,26 +1,18 @@
-@media (min-width: 990px) {
-  .veg-fluid-grid {
-    padding-left: 1.8rem;
-    padding-right: 1.8rem;
-  }
-}
-
-.veg-index-grid {
-  display: flex;
-  flex-wrap: wrap;
+.veg-fluid-grid {
+  padding: 20px 40px;
+  margin: 0px;
 }
 
 .veg-index-item {
-  padding-left: .5375rem;
-  padding-right: .5375rem;
-  display: inline-block;
   position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  font-size: 600%;
   max-height: 393px;
   overflow: hidden;
-}
-
-.veg-index-item:hover {
-  background: #d83a16;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 50em) {
@@ -29,36 +21,28 @@
   }
 
   .veg-index-item:nth-of-type(2n) {
-    margin-right: 0;
+    margin-right: 8px;
   }
 
   .veg-index-item:nth-of-type(4n) {
     margin-right: 0;
   }
-
 }
 
-.veg-item-photo {
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-}
-
-@media (min-width: 767px) {
-  .veg-item-name-box {
-    margin-top: 10px
-  }
+.veg-item-photo:hover {
+    opacity: .5;
 }
 
 .veg-item-name-box {
   display: block;
   width: auto;
-  background-color: pink;
-  margin: 1.33em 0;
+  background-color: white;
   cursor: pointer;
 }
 
 .veg-item-name {
+  font-size: 16%;
+  padding: 4%;
   text-align: center;
   display: block;
   margin: 0;

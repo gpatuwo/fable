@@ -1,5 +1,4 @@
 import React from 'react';
-import VegIndexItem from './veg_index_item.jsx';
 
 class VegIndexFiltered extends React.Component {
   constructor(props) {
@@ -19,7 +18,6 @@ class VegIndexFiltered extends React.Component {
   }
 
   handleClick(vegId) {
-    
     const vegArr = this.state.selectedVegIds.concat([vegId]);
     this.setState({selectedVegIds: vegArr}, () => {
       this.props.queryRecipes(this.state.selectedVegIds);
@@ -35,7 +33,7 @@ class VegIndexFiltered extends React.Component {
           src={veg.image}/>
         <div className="veg-item-name-box">
           <h4 className="veg-item-name">
-            {veg.name && veg.name.toLowerCase()}</h4>
+            {veg.name.toLowerCase()}</h4>
         </div>
       </li>
     );

@@ -17,6 +17,11 @@
 * {
 
   font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+  background-color: #e2e1d7;
 }
 
 p {
@@ -26,35 +31,7 @@ h1, h2, h3, h4 {
   font-family: 'Libre Baskerville', serif;
 }
 
-.login-signup {
-  text-align: center;
-}
 
-.login-form-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-
-.login-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.login-input {
-  margin-left: 20px;
-}
-
-.login-form-box {
-  outline: 3px solid black;
-  padding: 20px;
-}
-
-.welcome-logout {
-  text-align: center;
-  font-size: 16px;
-}
 
 .new-form {
   float: left;

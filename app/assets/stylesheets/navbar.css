@@ -66,13 +66,17 @@ li:hover .header-profile {
 }
 
 .header-search-wrapper {
-
+  border: 1px solid #70706e;
+  padding: 5px 5px;
+  margin: 20px;
+  margin-right: 40px;
+  background-color: white;
 }
 
 .header-search {
   min-height: 26px;
   font-size: 13px;
-  padding: 10px 20px;
+  padding: 10px 1.5px;
   background: none;
   border: 0;
   box-shadow: none;

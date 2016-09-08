@@ -7,7 +7,6 @@ export const fetchRecipes = (success) => {
 };
 
 export const queryRecipes = (vegId, success) => {
-  debugger
   $.ajax({
     method: 'GET',
     url: 'api/recipes',
