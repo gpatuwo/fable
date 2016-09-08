@@ -23,7 +23,7 @@ const NavBar = () => (
         </li>
 
         <li className='header-links'>
-          <Link to="#">
+          <Link to="/login">
             Profile
           </Link>
           <ul className="header-profile">

@@ -16,7 +16,6 @@ import { requestRecipes,
 
 import {hashHistory} from 'react-router';
 
-// filter constants will go here too
 
 export default ({getState, dispatch}) => next => action => {
   const recipesSuccess = data => {

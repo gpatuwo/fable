@@ -69,7 +69,6 @@ li:hover .header-profile {
 }
 
 .header-search-wrapper {
-  border: 1px solid #70706e;
   padding: 5px 5px;
   margin: 20px;
   margin-right: 3vw;
@@ -80,7 +79,4 @@ li:hover .header-profile {
   min-height: 26px;
   font-size: 13px;
   padding: 5px 1.5px;
-
-
-
 }

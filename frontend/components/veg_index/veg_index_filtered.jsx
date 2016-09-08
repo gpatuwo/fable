@@ -33,7 +33,7 @@ class VegIndexFiltered extends React.Component {
         key={veg.id}>
         <img className={this.renderClass(veg.id)}
           src={veg.image}/>
-        <div className="veg-item-name-box">
+        <div className={this.renderNameClass(veg.id)}>
           <h4 className="veg-item-name">
             {veg.name.toLowerCase()}</h4>
         </div>
@@ -46,6 +46,14 @@ class VegIndexFiltered extends React.Component {
       return "veg-item-photo overlay";
     } else {
       return "veg-item-photo";
+    }
+  }
+
+  renderNameClass(vegId){
+    if (this.state.selectedVegIds.includes(vegId)) {
+      return "veg-item-name-box-clicked";
+    } else {
+      return "veg-item-name-box";
     }
   }
 
