@@ -15,20 +15,15 @@
  */
 
 * {
-  white-space: pre-wrap;
+
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  white-space: pre-wrap;
+}
 h1, h2, h3, h4 {
   font-family: 'Libre Baskerville', serif;
-}
-
-
-.header-logo img {
-  width: 15%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .login-signup {

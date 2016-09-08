@@ -11,14 +11,16 @@
 }
 
 .veg-index-item {
-  padding-left: .9375rem;
-  padding-right: .9375rem;
+  padding-left: .5375rem;
+  padding-right: .5375rem;
   display: inline-block;
   position: relative;
-  margin-bottom: 8px;
-  margin-right: 8px;
   max-height: 393px;
   overflow: hidden;
+}
+
+.veg-index-item:hover {
+  background: #d83a16;
 }
 
 @media screen and (min-width: 50em) {
@@ -27,7 +29,7 @@
   }
 
   .veg-index-item:nth-of-type(2n) {
-    margin-right: 8px;
+    margin-right: 0;
   }
 
   .veg-index-item:nth-of-type(4n) {

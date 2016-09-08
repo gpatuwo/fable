@@ -1,0 +1,80 @@
+.header {
+  background: #d83a16;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.header a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.header-nav {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-logo {
+  float: left;
+  width: 12%;
+}
+
+.header-list {
+  float: right;
+  position: relative;
+}
+
+.header-links {
+  float: left;
+  line-height: 4.2em;
+  font-family: 'Roboto';
+  font-size: 80%;
+}
+
+.header-links:hover {
+  color: #e2e1d7;
+}
+
+.header-profile {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.header-profile-action {
+  padding: 0px 20px;
+}
+
+li:hover .header-profile {
+  display: block;
+}
+
+.header-profile > li {
+  color: #d83a16;
+}
+
+.header-profile > li:hover {
+  background: #d83a16;
+  color: white
+}
+
+.header-search-wrapper {
+
+}
+
+.header-search {
+  min-height: 26px;
+  font-size: 13px;
+  padding: 10px 20px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  vertical-align: middle;
+}
