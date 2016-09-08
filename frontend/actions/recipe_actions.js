@@ -6,7 +6,8 @@ export const RecipeConstants = {
   CREATE_RECIPE: "CREATE_RECIPE",
   DELETE_RECIPE: "DELETE_RECIPE",
   UPDATE_RECIPE: "UPDATE_RECIPE",
-  RECEIVE_ERRORS: "RECEIVE_RECIPE_ERRORS"
+  RECEIVE_ERRORS: "RECEIVE_RECIPE_ERRORS",
+  QUERY_RECIPES: "QUERY_RECIPES"
 };
 
 export const requestRecipes = () => ({
@@ -16,6 +17,11 @@ export const requestRecipes = () => ({
 export const requestRecipe = id => ({
   type: RecipeConstants.REQUEST_RECIPE,
   id
+});
+
+export const queryRecipes = vegId => ({
+  type: RecipeConstants.QUERY_RECIPES,
+  vegId
 });
 
 export const receiveRecipes = recipes => ({

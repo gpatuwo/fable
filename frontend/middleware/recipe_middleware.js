@@ -3,7 +3,8 @@ import { fetchRecipes,
          fetchRecipe,
          createRecipe,
          deleteRecipe,
-         updateRecipe
+         updateRecipe,
+         queryRecipes
 } from '../util/recipe_api_util.js';
 // Recipe Action
 import { requestRecipes,
@@ -48,6 +49,9 @@ export default ({getState, dispatch}) => next => action => {
     case RecipeConstants.UPDATE_RECIPE:
       updateRecipe(action.id, action.recipe,
          recipeSuccess, errorCallback);
+      break;
+    case RecipeConstants.QUERY_RECIPES:
+      queryRecipes(action.vegId, recipesSuccess);
       break;
     default:
       break;

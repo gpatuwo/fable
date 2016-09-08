@@ -2,6 +2,16 @@ class Api::RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+
+    if params[:vegId]
+      @vegetables = []
+      params[:vegId].each do |vegId|
+        veg = Vegetable.find(vegId)
+        if veg
+          @recipes = @recipes.where("ingredients ILIKE ?", "%#{veg.name}%")
+        end
+      end
+    end
     render "api/recipes/index"
   end
 

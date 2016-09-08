@@ -6,7 +6,7 @@ class Api::VegetablesController < ApplicationController
 
   def show
     @vegetable = Vegetable.find(params[:id])
-    render "api/vegetables/show"
+    render "api/recipes/index"
   end
 
   def new
@@ -63,7 +63,8 @@ class Api::VegetablesController < ApplicationController
       :sep,
       :oct,
       :nov,
-      :dec
+      :dec,
+      :recipes
     )
   end
 end

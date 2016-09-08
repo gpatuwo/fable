@@ -57,7 +57,6 @@ class VegForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props);
     return(
       <ul>
         {this.props.errors.map( (error, i) => (

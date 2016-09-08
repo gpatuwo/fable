@@ -7,6 +7,7 @@ class RecipeEditForm extends React.Component {
     this.state = props.recipe;
     this.handleUpdate = this.handleUpdate.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
+    this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
 
@@ -31,6 +32,15 @@ class RecipeEditForm extends React.Component {
         console.log('ugh cloudinary upload error');
       }
     });
+  }
+
+  updateCheckbox(vegId){
+    const vegetable = this.props.vegetables[vegId].name;
+    return () => {
+      var vegetables = this.state.vegetables;
+      vegetables.push(vegetable);
+      this.setState({vegetables: vegetables});
+    };
   }
 
   renderErrors() {
@@ -77,6 +87,26 @@ class RecipeEditForm extends React.Component {
                 onChange={this.update("ingredients")}
                 className='form-field'/>
             <br />
+              <label className='form-field-title'>
+                Which vegetables do you want to add this recipe to?</label>
+              <br />
+              {Object.keys(this.props.vegetables).map(
+                (vegId) => {
+                  const vegName = this.props.vegetables[vegId].name;
+
+                  return (
+                    <label key={vegId}>
+                      {vegName.toLowerCase()}
+                      <input type="checkbox"
+                        value={vegName}
+                        onChange={this.updateCheckbox(vegId)}
+                        className="form-field-checkbox"
+                        checked={this.state.vegetables.includes(vegName)}/>
+                    </label>
+                  );
+                }
+              )}
+              <br />
             <label className='form-field-title'>Instructions</label>
             <br />
             <textarea rows="20" cols="100" value={this.state.instructions}
