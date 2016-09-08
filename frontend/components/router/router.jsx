@@ -82,6 +82,7 @@ class AppRouter extends React.Component{
               component={RecipeFormContainer}
               onEnter={this._ensureLoggedIn}/>
             <Route path=":recipeId"
+              onEnter={this.recipes}
               component={RecipeShowContainer}/>
             <Route path=":recipeId/edit"
               component={RecipeEditFormContainer}/>

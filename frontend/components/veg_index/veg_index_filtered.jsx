@@ -1,5 +1,6 @@
 import React from 'react';
 import RecipeIndexContainer from "../recipe_index/recipe_index_container.js";
+import GreetingContainer from '../greeting/greeting_container';
 
 class VegIndexFiltered extends React.Component {
   constructor(props) {
@@ -53,37 +54,41 @@ class VegIndexFiltered extends React.Component {
     const vegetables = this.props.vegetables;
     const selectedVegIds = this.state.selectedVegIds;
     return (
-      <section className="homepage">
-        <section className="veg-fluid-grid">
-          <ul className="veg-index-grid">
-            {vegetables && Object.keys(vegetables).map(
-              (vegObjectId) => {
-                const month = Date().split(" ")[1].toLowerCase();
-                const veg = vegetables[vegObjectId];
-                if (veg[month] === true) {
-                  return (this.renderVegItem(veg));
-                }
-              })
-            }
-          </ul>
-        </section>
-
-        <section className="veg-selection-wrapper">
-          <ul className="veg-selection">
-            <h4 className="veg-selection-head">Section:</h4>
-            {selectedVegIds.map(
-              (vegId) => {
-
-                const vegetable = vegetables[vegId];
-                return ( <li key={vegId}>{vegetable.name.toLowerCase()}</li>);
+      <section className="homepage-wrapper">
+        <GreetingContainer/>
+        <section className="homepage">
+          <section className="veg-fluid-grid">
+            <ul className="veg-index-grid">
+              {vegetables && Object.keys(vegetables).map(
+                (vegObjectId) => {
+                  const month = Date().split(" ")[1].toLowerCase();
+                  const veg = vegetables[vegObjectId];
+                  if (veg[month] === true) {
+                    return (this.renderVegItem(veg));
+                  }
+                })
               }
-            )}
-          </ul>
+            </ul>
+          </section>
+
+          <section className="veg-selection-wrapper">
+            <ul className="veg-selection">
+              <h4 className="veg-selection-head">Section:</h4>
+              {selectedVegIds.map(
+                (vegId) => {
+
+                  const vegetable = vegetables[vegId];
+                  return ( <li key={vegId}>{vegetable.name.toLowerCase()}</li>);
+                }
+              )}
+            </ul>
+          </section>
+
+          <RecipeIndexContainer/>
+
         </section>
-
-        <RecipeIndexContainer/>
-
       </section>
+
     );
   }
 }
