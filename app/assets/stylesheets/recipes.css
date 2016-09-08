@@ -1,3 +1,8 @@
+.recipes-filter-wrapper {
+  background-color: white;
+  margin-top: 20px;
+}
+
 .recipe-index-wrapper {
   margin: 30px 0px;
 }
@@ -32,7 +37,7 @@
 
 .recipe-index-title {
   color: #d83a16;
-  font-size: 150%;
+  font-size: 2.5vw;
 }
 
 .recipe-index-ingredients{
@@ -40,4 +45,5 @@
   bottom: 2.5%;
   margin-right: 7%;
   font-family: 'Roboto', sans-serif;
+  font-size: 1vw;
 }

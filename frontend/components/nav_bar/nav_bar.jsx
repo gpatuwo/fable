@@ -5,7 +5,7 @@ const NavBar = () => (
   <header className="header">
     <nav className="header-nav">
 
-      <Link to="/vegetables" className='header-logo'>
+      <Link to="/" className='header-logo'>
         <img src="assets/fable_white.png"/>
       </Link>
 

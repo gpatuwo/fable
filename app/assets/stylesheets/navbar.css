@@ -7,7 +7,7 @@
 
 .header a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 3vw;
 }
 
 .header-nav {
@@ -20,8 +20,9 @@
 
 .header-logo {
   float: left;
-  width: 12%;
-  margin-left: 20px
+  width: 7.5vw;
+  margin-left: 20px;
+  margin: 1vw 0;
 }
 
 .header-list {
@@ -31,7 +32,7 @@
 .header-links {
   float: left;
   font-family: 'Roboto';
-  font-size: 80%;
+  font-size: 1.3vw;
 }
 
 .header-links:hover {
@@ -71,7 +72,7 @@ li:hover .header-profile {
   border: 1px solid #70706e;
   padding: 5px 5px;
   margin: 20px;
-  margin-right: 40px;
+  margin-right: 3vw;
   background-color: white;
 }
 

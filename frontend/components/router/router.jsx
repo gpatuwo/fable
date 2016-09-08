@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Components
 import App from '../App.jsx';
+import GreetingContainer from '../greeting/greeting_container.js';
 import SessionFormContainer from '../session_form/session_form_container';
 import VegFormContainer from '../veg_form/veg_form_container.js';
 import VegShowContainer from '../veg_show/veg_show_container.js';
@@ -64,7 +65,8 @@ class AppRouter extends React.Component{
             onEnter={this._redirectIfLoggedIn}/>
           <Route path="vegetables"
            onEnter={this.vegetables}>
-            <IndexRoute component={VegIndexContainer}/>
+           <IndexRoute
+             component={VegIndexFilteredContainer}/>
             <Route path="new"
               component= {VegFormContainer}
               onEnter={this._ensureLoggedIn}/>

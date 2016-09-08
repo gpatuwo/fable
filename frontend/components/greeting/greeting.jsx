@@ -25,11 +25,17 @@ const personalGreeting = (currentUser, router, logout) => (
 );
 
 const Greeting = ({currentUser, router, logout}) => {
-  if (currentUser) {
-    return personalGreeting(currentUser, router, logout);
-  } else {
-    return sessionLinks();
-  }
+  return(
+    <section className="greeting-wrapper">
+      <div className="greeting-content">
+        <h1 className="greeting-head">Welcome to Fable</h1>
+        <p className="greeting-caption">
+          Here are the vegetables in-season in San Francisco right now.<br/>
+          Click on the vegetables to see recipes.
+        </p>
+      </div>
+    </section>
+  );
 };
 
 export default withRouter(Greeting);

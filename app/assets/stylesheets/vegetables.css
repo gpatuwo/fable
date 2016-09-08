@@ -1,5 +1,5 @@
 .homepage {
-  padding: 20px 40px;
+  padding: 20px 3vw;
   margin: 0px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .veg-item-name {
-  font-size: 16%;
+  font-size: 1.5vw;
   padding: 6%;
   text-align: center;
   display: block;
@@ -63,9 +63,4 @@
 
 .veg-selection-head {
   margin: 0 0 0 0;
-}
-
-.recipes-filter-wrapper {
-  background-color: white;
-  margin-top: 20px;
 }
