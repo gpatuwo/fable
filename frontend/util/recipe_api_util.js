@@ -52,3 +52,24 @@ export const updateRecipe = (id, recipe, success) => {
     success
   });
 };
+
+export const createComment = (recipe, success, error) => {
+  $.ajax({
+    method: 'POST',
+    url: 'api/comments',
+    data: recipe,
+    success,
+    error
+  });
+};
+
+export const deleteComment = (commentId, success) => {
+  $.ajax({
+    method: 'DELETE',
+    url: `api/comments/${commentId}`,
+    success,
+    error: () => {
+      console.log("deletion error in RecipeApiUtil#deleteComment");
+    }
+  });
+};

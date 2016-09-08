@@ -4,7 +4,9 @@ import { fetchRecipes,
          createRecipe,
          deleteRecipe,
          updateRecipe,
-         queryRecipes
+         queryRecipes,
+         createComment,
+         deleteComment
 } from '../util/recipe_api_util.js';
 // Recipe Action
 import { requestRecipes,
@@ -51,6 +53,12 @@ export default ({getState, dispatch}) => next => action => {
       break;
     case RecipeConstants.QUERY_RECIPES:
       queryRecipes(action.vegIds, recipesSuccess);
+      break;
+    case RecipeConstants.CREATE_COMMENT:
+      createComment(action.comment, recipeSuccess);
+      break;
+    case RecipeConstants.DELETE_COMMENT:
+      deleteComment(action.commentId, () => next(action));
       break;
     default:
       break;

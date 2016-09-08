@@ -31,7 +31,14 @@ h1, h2, h3, h4 {
   font-family: 'Libre Baskerville', serif;
 }
 
-
+button {
+  width: 20%;
+  background: #d83a16;
+  color: white;
+  font-family: 'Roboto';
+  padding: 1vw;
+  text-align: center;
+}
 
 .new-form {
   float: left;
@@ -46,35 +53,4 @@ h1, h2, h3, h4 {
 .form-field {
   padding: 5px;
   font-size: 14px;
-}
-
-.page-show {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  text-align: justify;
-}
-
-
-
-.recipe-title {
-  font-size: 30px;
-  text-align: center;
-}
-
-.recipe-author {
-  color: grey;
-  text-align: center;
-}
-
-.recipe-photo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.recipe-ingredients {
-
 }
