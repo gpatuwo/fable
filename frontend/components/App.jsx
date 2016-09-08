@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router';
-import NavBar from './nav_bar/nav_bar.jsx';
+import NavBarContainer from './navbar/navbar.jsx';
 
 const App = ({children}) => (
   <div>
-    <NavBar/>
+    <NavBarContainer/>
 
     {children}
   </div>

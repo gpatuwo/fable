@@ -1,6 +1,6 @@
 import React from 'react';
 import RecipeIndexContainer from "../recipe_index/recipe_index_container.js";
-import GreetingContainer from '../greeting/greeting_container';
+import Greeting from '../greeting/greeting';
 
 class VegIndexFiltered extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class VegIndexFiltered extends React.Component {
     const selectedVegIds = this.state.selectedVegIds;
     return (
       <section className="homepage-wrapper">
-        <GreetingContainer/>
+        <Greeting/>
         <section className="homepage">
           <section className="veg-fluid-grid">
             <ul className="veg-index-grid">

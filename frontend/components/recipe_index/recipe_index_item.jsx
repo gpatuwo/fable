@@ -7,7 +7,7 @@ const handleClick = (router, url) => (
 
 const RecipeIndexItem = ({recipe, router}) => (
     <li className="recipe-index-item"
-      onClick={handleClick(router,  `recipes/${recipe.id}`)}>
+      onClick={handleClick(router, `recipes/${recipe.id}`)}>
       <div className="recipe-index-photo-wrapper">
         <img className="recipe-index-photo" src={recipe.image}/>
       </div>

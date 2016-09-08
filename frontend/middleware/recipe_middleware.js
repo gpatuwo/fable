@@ -37,7 +37,7 @@ export default ({getState, dispatch}) => next => action => {
       fetchRecipes(recipesSuccess);
       break;
     case RecipeConstants.REQUEST_RECIPE:
-      fetchRecipes(action.id, recipeSuccess);
+      fetchRecipe(action.id, recipeSuccess);
       break;
     case RecipeConstants.CREATE_RECIPE:
       createRecipe(action.recipe, recipeSuccess, errorCallback);

@@ -11,6 +11,8 @@ class Api::RecipesController < ApplicationController
           @recipes += Recipe.all.where("ingredients ILIKE ?", "%#{veg.name}%")
         end
       end
+    else
+      @recipes = Recipe.all
     end
     render "api/recipes/index"
   end
