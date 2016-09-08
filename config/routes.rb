@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :vegetables
     resources :recipes
     resources :taggings, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 
   root "static_pages#root"
