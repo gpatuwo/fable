@@ -6,11 +6,19 @@ const handleClick = (router, url) => (
 );
 
 const RecipeIndexItem = ({recipe, router}) => (
-    <li className="index-item"
+    <li className="recipe-index-item"
       onClick={handleClick(router,  `recipes/${recipe.id}`)}>
-      <img className="index-photo" src={recipe.image}/>
-      <h2 className="grid-name">
-        {recipe.title && recipe.title.toLowerCase()}</h2>
+      <div className="recipe-index-photo-wrapper">
+        <img className="recipe-index-photo" src={recipe.image}/>
+      </div>
+      {/*<div className="recipe-triangle"/>*/}
+      <div className="recipe-index-info-wrapper">
+        <h2 className="recipe-index-title">
+          {recipe.title}</h2>
+        <p className="recipe-index-ingredients">
+          {recipe.ingredients}
+        </p>
+      </div>
     </li>
 
 );
