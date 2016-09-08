@@ -39,21 +39,53 @@ class VegIndexFiltered extends React.Component {
     );
   }
 
+  renderRecipes(selectedVegIds){
+
+    return (
+      <p>recipe container!</p>
+    );
+  }
+
+
   render(){
     const vegetables = this.props.vegetables;
+    const selectedVegIds = this.state.selectedVegIds;
     return (
-      <section className="veg-fluid-grid">
-        <ul className="veg-index-grid">
-          {vegetables && Object.keys(vegetables).map(
-            (vegObjectId) => {
-              const month = Date().split(" ")[1].toLowerCase();
-              const veg = vegetables[vegObjectId];
-              if (veg[month] === true) {
-                return (this.renderVegItem(veg));
+      <section className="homepage">
+        <section className="veg-fluid-grid">
+          <ul className="veg-index-grid">
+            {vegetables && Object.keys(vegetables).map(
+              (vegObjectId) => {
+                const month = Date().split(" ")[1].toLowerCase();
+                const veg = vegetables[vegObjectId];
+                if (veg[month] === true) {
+                  return (this.renderVegItem(veg));
+                }
+              })
+            }
+          </ul>
+        </section>
+
+        <section className="veg-selection-wrapper">
+          <ul className="veg-selection">
+            <h4 className="veg-selection-head">Section:</h4>
+            {selectedVegIds.map(
+              (vegId) => {
+
+                const vegetable = vegetables[vegId];
+                return ( <li key={vegId}>{vegetable.name.toLowerCase()}</li>);
               }
-            })
-          }
-        </ul>
+            )}
+          </ul>
+        </section>
+
+        <section className="recipes-filter-wrapper">
+          <ul className="recipes-filter">
+            {selectedVegIds.empty ?
+              "" : this.renderRecipes(selectedVegIds)
+            }
+          </ul>
+        </section>
       </section>
     );
   }

@@ -1,4 +1,4 @@
-.veg-fluid-grid {
+.homepage {
   padding: 20px 40px;
   margin: 0px;
 }
@@ -46,4 +46,21 @@
   text-align: center;
   display: block;
   margin: 0;
+}
+
+.veg-selection-wrapper {
+  background-color: white;
+}
+
+.veg-selection {
+  padding: 10px 20px;
+}
+
+.veg-selection-head {
+  margin: 0 0 0 0;
+}
+
+.recipes-filter-wrapper {
+  background-color: white;
+  margin-top: 20px;
 }

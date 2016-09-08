@@ -1,0 +1,61 @@
+.index-grid {
+  padding: 20px;
+  margin: 0px;
+}
+
+.index-photo {
+  display: block;
+  max-width: inherit;
+  height: auto;
+  width: auto\9;
+  -ms-interpolation-mode: bicubic;
+}
+
+.index-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  font-size: 600%;
+  max-height: 393px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 50em) {
+  .index-item {
+    width: calc(25% - 6px);
+  }
+
+  .index-item:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .index-item:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.grid-name {
+  position: absolute;
+  top: 73px;
+  width: 100%;
+  color: white;
+  font-size: 65%;
+  text-align: center;
+}
+
+.veg-photo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.veg-name {
+  position: absolute;
+  top: 29px;
+  width: 100%;
+  color: white;
+  font-size: 600%;
+  text-align: center;
+}
