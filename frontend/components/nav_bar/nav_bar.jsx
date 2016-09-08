@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 const NavBar = () => (
   <header className="header">
-    <nav className="header-nav group">
+    <nav className="header-nav">
 
       <Link to="/vegetables" className='header-logo'>
         <img src="assets/fable_white.png"/>

@@ -51,7 +51,7 @@ export default ({getState, dispatch}) => next => action => {
          recipeSuccess, errorCallback);
       break;
     case RecipeConstants.QUERY_RECIPES:
-      queryRecipes(action.vegId, recipesSuccess);
+      queryRecipes(action.vegIds, recipesSuccess);
       break;
     default:
       break;

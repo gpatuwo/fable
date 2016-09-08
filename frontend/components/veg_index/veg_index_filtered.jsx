@@ -1,4 +1,5 @@
 import React from 'react';
+import RecipeIndexContainer from "../recipe_index/recipe_index_container.js";
 
 class VegIndexFiltered extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class VegIndexFiltered extends React.Component {
       <li className="veg-index-item"
         onClick={this.handleClick.bind(this, veg.id)}
         key={veg.id}>
-        <img className="veg-item-photo"
+        <img className={this.renderClass(veg.id)}
           src={veg.image}/>
         <div className="veg-item-name-box">
           <h4 className="veg-item-name">
@@ -39,11 +40,12 @@ class VegIndexFiltered extends React.Component {
     );
   }
 
-  renderRecipes(selectedVegIds){
-
-    return (
-      <p>recipe container!</p>
-    );
+  renderClass(vegId){
+    if (this.state.selectedVegIds.includes(vegId)) {
+      return "veg-item-photo overlay";
+    } else {
+      return "veg-item-photo";
+    }
   }
 
 
@@ -79,13 +81,8 @@ class VegIndexFiltered extends React.Component {
           </ul>
         </section>
 
-        <section className="recipes-filter-wrapper">
-          <ul className="recipes-filter">
-            {selectedVegIds.empty ?
-              "" : this.renderRecipes(selectedVegIds)
-            }
-          </ul>
-        </section>
+        <RecipeIndexContainer/>
+
       </section>
     );
   }

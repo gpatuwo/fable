@@ -33,6 +33,10 @@
     opacity: .5;
 }
 
+.overlay {
+  opacity: .5;
+}
+
 .veg-item-name-box {
   display: block;
   width: auto;
@@ -42,7 +46,7 @@
 
 .veg-item-name {
   font-size: 16%;
-  padding: 4%;
+  padding: 6%;
   text-align: center;
   display: block;
   margin: 0;

@@ -6,11 +6,11 @@ export const fetchRecipes = (success) => {
   });
 };
 
-export const queryRecipes = (vegId, success) => {
+export const queryRecipes = (vegIds, success) => {
   $.ajax({
     method: 'GET',
     url: 'api/recipes',
-    data: {vegId},
+    data: {vegIds},
     success
   });
 };

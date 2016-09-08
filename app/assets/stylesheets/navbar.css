@@ -13,6 +13,9 @@
 .header-nav {
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
@@ -22,13 +25,11 @@
 }
 
 .header-list {
-  float: right;
-  position: relative;
+
 }
 
 .header-links {
   float: left;
-  line-height: 4.2em;
   font-family: 'Roboto';
   font-size: 80%;
 }
@@ -77,9 +78,8 @@ li:hover .header-profile {
 .header-search {
   min-height: 26px;
   font-size: 13px;
-  padding: 10px 1.5px;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  vertical-align: middle;
+  padding: 5px 1.5px;
+
+
+
 }

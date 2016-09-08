@@ -19,9 +19,9 @@ export const requestRecipe = id => ({
   id
 });
 
-export const queryRecipes = vegId => ({
+export const queryRecipes = vegIds => ({
   type: RecipeConstants.QUERY_RECIPES,
-  vegId
+  vegIds
 });
 
 export const receiveRecipes = recipes => ({

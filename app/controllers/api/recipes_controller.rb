@@ -1,14 +1,14 @@
 class Api::RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all
+    @recipes = []
 
-    if params[:vegId]
+    if params[:vegIds]
       @vegetables = []
-      params[:vegId].each do |vegId|
+      params[:vegIds].each do |vegId|
         veg = Vegetable.find(vegId)
         if veg
-          @recipes = @recipes.where("ingredients ILIKE ?", "%#{veg.name}%")
+          @recipes += Recipe.all.where("ingredients ILIKE ?", "%#{veg.name}%")
         end
       end
     end
