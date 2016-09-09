@@ -22,6 +22,7 @@ class AppRouter extends React.Component{
   constructor(props){
     super(props);
     this._ensureLoggedIn = this._ensureLoggedIn.bind(this);
+    this._ensureGrace = this._ensureGrace.bind(this);
     this._redirectIfLoggedIn = this._redirectIfLoggedIn.bind(this);
     this.vegetables = this.vegetables.bind(this);
     this.recipes = this.recipes.bind(this);
@@ -31,6 +32,13 @@ class AppRouter extends React.Component{
     const currentUser = this.props.currentUser;
     if (!currentUser) {
       replace('/login');
+    }
+  }
+
+  _ensureGrace(nextState,replace){
+    const currentUser = this.props.currentUser;
+    if (!currentUser || (currentUser.username !=='Grace')) {
+      replace('/');
     }
   }
 
@@ -69,10 +77,12 @@ class AppRouter extends React.Component{
              component={VegIndexContainer}/>
             <Route path="new"
               component= {VegFormContainer}
-              onEnter={this._ensureLoggedIn}/>
+              onEnter={this._ensureGrace}/>
             <Route path=":vegId"
+              onEnter={this._ensureGrace}
               component={VegShowContainer}/>
             <Route path=":vegId/edit"
+              onEnter={this._ensureGrace}
               component={VegEditFormContainer}/>
           </Route>
           <Route path="recipes"
@@ -88,6 +98,7 @@ class AppRouter extends React.Component{
                 onEnter={this._ensureLoggedIn}/>
             </Route>
             <Route path=":recipeId/edit"
+              onEnter={this._ensureLoggedIn}
               component={RecipeEditFormContainer}/>
           </Route>)
         </Route>
