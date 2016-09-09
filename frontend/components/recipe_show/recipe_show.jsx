@@ -25,7 +25,7 @@ const commentList = (comments=[]) => {
             username={comment.commenter}
             date={date.toDateString()}
             body={comment.body}
-            key={comment.id}/>
+            key={comment.id} />
 
         );
       })
