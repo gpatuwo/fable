@@ -4,7 +4,7 @@ import {Link, withRouter} from 'react-router';
 const sessionLinks = () => {
   return (
     <li className='header-links'>
-      <Link to="#">
+      <Link to="">
         Profile
       </Link>
       <ul className="header-profile">

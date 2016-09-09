@@ -60,36 +60,38 @@ class SessionForm extends React.Component {
 
   render(){
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className='login-form-box'>
-          Welcome to Fable!
-          <br/>
-          Please { this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
-          <div className="login-form">
-            <br />
-            <label>Username:
-                <input type="text"
-                        value={this.state.username}
-                        onChange={this.update("username")}
-                        className="login-input" />
-            </label>
+      <div className="login-page">
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className='login-form-box'>
+            <h1 className="login-title">Welcome to Fable!</h1>
+            <p className="login-instruction">Please { this.props.formType} or {this.navLink()}
+            </p>
+            <ul className="login-errors">{this.renderErrors()}</ul>
+            <div className="login-form">
+              <input type="text"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                  className="login-input"
+                  placeholder="Username"/>
 
-            <br />
-            <label>Password:
-                <input type="password"
-                        value={this.state.password}
-                        onChange={this.update('password')}
-                        className="login-input" />
-            </label>
+              <input type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="login-input"
+                      placeholder="Password"/>
+              <input type="submit"
+                value="Submit"
+                className="submit-button" />
+              <input type="button"
+                className="guest-account-button"
+                onClick={this.handleGuest}
+                value="Guest Account"/>
 
-            <br />
-            <input type="submit" value="Submit" />
-            <input type="button" onClick={this.handleGuest} value="Guest Account"/>
-
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
+
     );
   }
 

@@ -1,29 +1,86 @@
-.login-signup {
-  text-align: center;
+.login-page {
+
+  /*background-image: url("http://res.cloudinary.com/djulergb7/image/upload/v1473360324/veg-pattern_clear_icwdoy.png");*/
 }
 
 .login-form-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
+  max-width: 1000px;
+  padding: 20px 6vw;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #d83a16;
 }
+
+.login-form-box {
+  background: white;
+  padding: 20px;
+}
+
+.login-title {
+  font-size: 200%;
+  text-align: center;
+}
+
+.login-instruction {
+    text-align: center;
+}
+
+.login-errors {
+  text-align: center;
+  margin: 4%;
+  color: black;
+  font-family: 'Roboto';
+}
+
 
 .login-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .login-input {
-  margin-left: 20px;
+  border: 1px solid #d83a16;
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #70706e;
+  font-family: 'Roboto';
+  margin-top: 2%;
 }
 
-.login-form-box {
-  outline: 3px solid black;
-  padding: 20px;
-}
 
 .welcome-logout {
   text-align: center;
   font-size: 16px;
+}
+
+.submit-button {
+  width: 18%;
+  background: #70706e;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 80%;
+  text-align: center;
+  padding: 2%;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guest-account-button{
+  width: 18%;
+  background: #d83a16;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 80%;
+  text-align: center;
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
