@@ -67,13 +67,6 @@ const NavBar = ({currentUser, router, logout}) => (
         { currentUser ?
           personalGreeting(currentUser, router, logout) : sessionLinks() }
 
-        <li className='header-links'>
-          <label className="header-search-wrapper">
-            <input type="text"
-              className="header-search"
-              placeholder="Search"/>
-          </label>
-        </li>
       </ul>
     </nav>
   </header>

@@ -9,18 +9,37 @@
 
 ##### It's built on a Postgres/Rails/React stack, so it's solid, easily extendable, and highly efficient in your browser.
 
-# Features
+# Features & Implementation
 
 ## Vegetables
 Fable filters through all the vegetables in its database to give you the vegetables that are currently in-season this month:
 ![veg-filter]
 [veg-filter]: ./public/veg-filter.png
-
+Below is the process for filtering the vegetables:
+``` javascript
+  vegetables && Object.keys(vegetables).map(
+    (vegObjectId) => {
+      const month = Date().split(" ")[1].toLowerCase();
+      const veg = vegetables[vegObjectId];
+      if (veg[month] === true) {
+        return (this.renderVegItem(veg));
+      }
+    })
+```
 ## Recipes
 You can click on these vegetables to select recipes that contain those ingredients.
 ![recipe-selection]
 [recipe-selection]: ./public/recipe-selection.png
 
+To implement this selection, I created a handle to add the selected vegetables into state and then using that to render all the matching recipes
+``` javascript
+handleClick(vegId) {
+  const vegArr = this.state.selectedVegIds.concat([vegId]);
+  this.setState({selectedVegIds: vegArr}, () => {
+    this.props.queryRecipes(this.state.selectedVegIds);
+  });
+}
+```
 These recipes cards show a preview of the recipe, with a scrollable ingredients preview:
 ![recipe-scroll]
 [recipe-scroll]: ./public/recipe-scroll.png
