@@ -1,28 +1,29 @@
 .greeting-wrapper{
-  width: 100%;
-  padding: 1.2vw 0;
-  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  margin-bottom: 1.5vw;
   background-color: white;
   color: #d83a16;
   background-image: url("http://res.cloudinary.com/djulergb7/image/upload/v1473360715/veg-pattern_orange_trans-back_rtsori.png");
 }
 
 .greeting-content {
-  width: 60%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-  padding: 1.5vw 0;
+  padding: 1%;
 }
 .greeting-head {
   text-align: center;
-  font-size: 3.7vw;
+  font-size: 200%;
 }
 
 .greeting-caption {
   font-family: 'Roboto';
-  font-size: 1.5vw;
+  font-size: 81%;
   text-align: center;
-  line-height: 2.4vw;
-  margin-top: 1vw;
+  line-height: 146%;
+  margin-top: 1%;
 }

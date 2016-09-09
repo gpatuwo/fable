@@ -73,8 +73,9 @@ class CommentForm extends React.Component {
 
   render() {
     return (
-      <div className="comment-form">
-        { this.props.currentUser ? this.renderCommentForm() : this.renderCommentLogin() }
+      <div>
+        { this.props.currentUser ?
+           this.renderCommentForm() : this.renderCommentLogin() }
       </div>
     );
  }

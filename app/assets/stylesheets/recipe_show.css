@@ -1,6 +1,8 @@
 .recipe-show-page {
-  padding: 20px 3vw;
-  margin: 0px;
+  padding: 20px 6vw;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .recipe-show-info {
@@ -10,13 +12,13 @@
 
 .recipe-title {
   color: #d83a16;
-  font-size: 3vw;
+  font-size: 200%;
 }
 
 .recipe-author {
   color: grey;
   margin: 1vw 0;
-  font-size: 1.6vw;
+  font-size: 100%;
 }
 
 .recipe-photo {
@@ -27,14 +29,22 @@
 
 .recipe-ingredients {
   font-family: 'Roboto';
-  font-size: 1.55vw;
-  margin: 3vw 0;
+  font-size: 80%;
+  margin: 3% 0;
 }
 
 .recipe-instructions {
   font-family: 'Roboto';
-  font-size: 1.55vw;
+  font-size: 80%;
   column-count: 2;
-  column-gap: 3vw;
+  column-gap: 30px;
   text-align: justify;
+}
+
+.recipe-show-buttons {
+  margin-top: 3vw;
+}
+
+button.recipe-edit-button {
+  margin-right: 2vw;
 }

@@ -9,7 +9,7 @@
 }
 
 .comment-title {
-  font-size: 2.5vw;
+  font-size: 150%;
   color: #70706e;
 }
 
@@ -47,22 +47,35 @@
   padding: 2vw 0;
   border-top: 1px solid #e2e1d7;
   border-bottom: 1px solid #e2e1d7;
+  display: flex;
 }
 
-.comment-user-date {
+.comment-user-photo-wrapper {
+  width: 4%;
+  height: 4%;
+  padding: 1%;
+  margin-right: 2%;
+  background: #d83a16;
+}
+.comment-info {
   display: flex;
   margin-bottom: .2vw;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .comment-user {
   margin: 0;
   margin-right: 2vw;
   line-height: 2.24vw;
-  font-size: 1.7vw;
+  font-size: 100%;
 }
 
 .comment-date {
-  font-size: 1.4vw;
+  font-size: 80%;
   color: #70706e;
-  line-height: 2.24vw;
+}
+
+.comment-body {
+    margin-top: 2%;
 }

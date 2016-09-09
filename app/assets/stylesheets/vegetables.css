@@ -1,6 +1,10 @@
 .homepage {
-  padding: 20px 3vw;
+  padding: 20px 6vw;
   margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  max-width: 1000px;
 }
 
 .veg-index-item {
@@ -52,7 +56,7 @@
 }
 
 .veg-item-name {
-  font-size: 1.5vw;
+  font-size: 15%;
   padding: 6%;
   text-align: center;
   display: block;
@@ -71,5 +75,5 @@
 
 .veg-selection-head {
   margin: 0 0 0 0;
-  font-size: 1.5vw;
+  font-size: 120%;
 }

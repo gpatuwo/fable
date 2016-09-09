@@ -62,39 +62,37 @@ class VegIndexFiltered extends React.Component {
     const vegetables = this.props.vegetables;
     const selectedVegIds = this.state.selectedVegIds;
     return (
-      <section className="homepage-wrapper">
+      <section className="homepage">
         <Greeting/>
-        <section className="homepage">
-          <section className="veg-fluid-grid">
-            <ul className="veg-index-grid">
-              {vegetables && Object.keys(vegetables).map(
-                (vegObjectId) => {
-                  const month = Date().split(" ")[1].toLowerCase();
-                  const veg = vegetables[vegObjectId];
-                  if (veg[month] === true) {
-                    return (this.renderVegItem(veg));
-                  }
-                })
-              }
-            </ul>
-          </section>
-
-          <section className="veg-selection-wrapper">
-            <ul className="veg-selection">
-              <h4 className="veg-selection-head">Selection:</h4>
-              {selectedVegIds.map(
-                (vegId) => {
-
-                  const vegetable = vegetables[vegId];
-                  return ( <li key={vegId}>{vegetable.name.toLowerCase()}</li>);
+        <section className="veg-fluid-grid">
+          <ul className="veg-index-grid">
+            {vegetables && Object.keys(vegetables).map(
+              (vegObjectId) => {
+                const month = Date().split(" ")[1].toLowerCase();
+                const veg = vegetables[vegObjectId];
+                if (veg[month] === true) {
+                  return (this.renderVegItem(veg));
                 }
-              )}
-            </ul>
-          </section>
-
-          <RecipeIndexContainer/>
-
+              })
+            }
+          </ul>
         </section>
+
+        <section className="veg-selection-wrapper">
+          <ul className="veg-selection">
+            <h4 className="veg-selection-head">Selection:</h4>
+            {selectedVegIds.map(
+              (vegId) => {
+
+                const vegetable = vegetables[vegId];
+                return ( <li key={vegId}>{vegetable.name.toLowerCase()}</li>);
+              }
+            )}
+          </ul>
+        </section>
+
+        <RecipeIndexContainer/>
+
       </section>
 
     );

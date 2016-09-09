@@ -53,10 +53,12 @@ const RecipeShow = ({recipe, recipeId,
           (currentUser.username === "Grace" ||
           currentUser.id === recipe.author_id) ?
           (<div className='recipe-show-buttons'>
-          <button onClick={handleEdit(recipeId, router)}>
+          <button className="recipe-edit-button"
+            onClick={handleEdit(recipeId, router)}>
             Edit recipe
           </button>
-          <button onClick={handleDelete(deleteRecipe, router)}>
+          <button className="recipe-edit-button"
+             onClick={handleDelete(deleteRecipe, router)}>
             Delete recipe
           </button>
         </div>
