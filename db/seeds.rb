@@ -19,7 +19,17 @@ Comment.create(body: "this artichoke thing is so delicious!!!", recipe_id: 1, us
 Comment.create(body: "this cassoulet is so delicious!!!", recipe_id: 2, user_id: 1)
 Comment.create(body: "this aioli is so delicious!!!", recipe_id: 3, user_id: 1)
 Comment.create(body: "this grilled veggie salad is so delicious!!!", recipe_id: 4, user_id: 1)
-Comment.create(body: "this cake is so delicious!!!", recipe_id: 5, user_id: 1)
+Comment.create(body: "Made this tonight and everyone loved it!", recipe_id: 6, user_id: 2)
+Comment.create(body: "I can eat this all the time", recipe_id: 7, user_id: 3)
+Comment.create(body: "Try my cake :D", recipe_id: 8, user_id: 4)
+Comment.create(body: "My kids loved this!", recipe_id: 9, user_id: 5)
+Comment.create(body: "I'd serve this at Ottolenghi", recipe_id: 10, user_id: 6)
+Comment.create(body: "I love my daughter Fanny and Fanny loved this.", recipe_id: 11, user_id: 7)
+Comment.create(body: "Mmmmmhmmm", recipe_id: 12, user_id: 4)
+Comment.create(body: "We gotta make a video about this on my youtube channel (go checkout FoodTube! ;)", recipe_id: 13, user_id: 5)
+Comment.create(body: "Used ingredients from my garden to make this. So delicious!", recipe_id: 14, user_id: 5)
+Comment.create(body: "Yaaaaas to this", recipe_id: 15, user_id: 2)
+Comment.create(body: "Ok this was pretty good.", recipe_id: 16, user_id: 6)
 
 Vegetable.create(name: 'Artichokes', description: 'It’s easy to forget that artichokes are largely a California phenomenon. Any dinner guest from outside the state will remind you of this: just notice the bewildered look on their faces as the artichoke is placed in front of them, followed by, “How do I eat this?” This is not an unreasonable question. The easiest way would be to steam it and then dip the leaves in a delicious sauce or aioli.', jan: false, feb: false, mar: true, apr: true, may: true, jun: true, jul: false, aug: false, sep: true, oct: true, nov: true, dec: true, image: 'http://res.cloudinary.com/djulergb7/image/upload/v1473114555/artichokes_sdmhoi.jpg')
 
@@ -85,12 +95,11 @@ The fruit of the tomatillo can be used as a base for chili sauces, known generic
 Recipe.create(
 title: "Artichokes with Parsley and Preserved Lemon Pesto",
 image: "https://images.food52.com/AYocb0Q6D8NuxXy-nfb03yNlbWw=/753x502/7e0526b7-1874-4cc4-8afb-20e6e43c54e7--Artichokes_with_gremolata.jpg",
-ingredients: "1/2	cup parsley (I like curly leaf,
-   but flat leaf would probably be fine)
-1	teaspoon kosher salt
-3	cloves garlic
-  Peel of half a preserved lemon
-4	medium artichokes (get ones with fat, long stems)
+ingredients: "1/2	cup parsley (I like curly leaf, but flat leaf would probably be fine)
+1 teaspoon kosher salt
+3 cloves garlic
+Peel of half a preserved lemon
+4 medium artichokes (get ones with fat, long stems)
 
 Serves 4 as a side dish",
 instructions: "1. Have some acidulated water ready (water with some lemon or vinegar in it) or a fresh lemon. Trim the artichoke of its leaves, the choke, and the tough woody exterior of the stem. Rub the cut areas once in a while with the lemon or dip in the acidulated water.
@@ -107,25 +116,23 @@ author_id: 3)
 Recipe.create(
 title: "Spring Vegetarian Cassoulet",
 image: "https://images.food52.com/64wPyXV71UGQhpfz6g0oBSiWZb0=/753x502/26560c92-153e-42ba-82b3-9ad1eae500ad--2016-0309_easter-spring-vegetarian-cassoulet_james-ransom_045.jpg",
-ingredients: "1 1/2 cups dried cannellini beans, soaked overnight in water
-   (if you are a cassoulet purist, use tarbais beans)
-2	lemons, divided
-5	globe artichokes
+ingredients: "1 1/2 cups dried cannellini beans, soaked overnight in water (if you are a cassoulet purist, use tarbais beans)
+2 lemons, divided
+5 globe artichokes
 1/2	cup olive oil
-4	cloves garlic, divided
-1/4	teaspoon dried chile flakes
-2	swipes lemon peel (obtained using a vegetable peeler)
-8	sprigs thyme, divided
-   Salt
-   Freshly ground black pepper
+4 cloves garlic, divided
+1/4 teaspoon dried chile flakes
+2 swipes lemon peel (obtained using a vegetable peeler)
+8 sprigs thyme, divided
+Salt
+Freshly ground black pepper
 1/2	cup white wine
-2	leeks
-4	cups water
-1	bay leaf
-1	tablespoon butter
-1/2	cup panko bread crumbs
-4	cups loosely packed sorrel leaves
-   (use baby spinach if sorrel is unavailable)
+2 leeks
+4 cups water
+1 bay leaf
+1 tablespoon butter
+1/2 cup panko bread crumbs
+4 cups loosely packed sorrel leaves (use baby spinach if sorrel is unavailable)
 
 Serves 4 to 6",
 instructions: "1. Fill a large mixing bowl with water. Squeeze the juice of 1 lemon into the water. When you clean the artichokes, put them into this water—the lemon in it will keep the artichoke hearts from turning brown.
@@ -145,19 +152,19 @@ Recipe.create(
 title: "Tarragon-Lemon Aioli Served with Grilled Artichokes",
 image: "https://images.food52.com/yPCx1RCVCk6gakrRSLYW83s-0uw=/753x502/8c95a455-22ad-44e2-aa36-03c374ccac3a--grilled-artichokes-tarragon-lemon-aioli_food52_mark_weinberg_14-07-01_0358.jpg",
 ingredients: "For the grilled artichokes:
-4	large globe artichokes
-1	lemon, quartered
-3/4	cup olive oil
-4	cloves garlic, peeled and chopped
-    Salt and pepper
+4 large globe artichokes
+1 lemon, quartered
+3/4 cup olive oil
+4 cloves garlic, peeled and chopped
+Salt and pepper
 
 For the tarragon-lemon aioli:
-6	garlic cloves, peeled
-2	fresh egg yolks (at room temperature)
-1	cup olive oil
-1	tablespoon fresh tarragon leaves, chopped
-1/2	teaspoon sea salt
-1	teaspoon fresh lemon juice
+6 garlic cloves, peeled
+2 fresh egg yolks (at room temperature)
+1 cup olive oil
+1 tablespoon fresh tarragon leaves, chopped
+1/2 teaspoon sea salt
+1 teaspoon fresh lemon juice
 
 
 Serves 4",
@@ -189,16 +196,13 @@ author_id: 3)
 Recipe.create(
 title: "Grilled Vegetable Vinaigrette",
 image: "https://images.food52.com/5zq4fXO8mQ7RAAIPROG1gVOieqw=/753x502/abcc7d3b-3bc6-4925-a8d5-a11dd672a21f--2016-0719_summer-grilled-vegetable-vinaigrette_james-ransom-281.jpg",
-ingredients: "1	medium fennel bulb, outer layer, stalks and fronds removed,
-   root end trimmed of brown bits
-1	small red onion (about 1/4 pound),
-   cut into 1/2-inch thick rounds
-1	small head radicchio (outermost leaves removed, bottom trimmed of brown bits,
-   quartered lengthwise) and cut into 1/2-inch thick wedges
-1/2	cup extra-virgin olive oil
-3	tablespoons sherry vinegar
-1	teaspoon Maldon or another flaky sea salt
-1	small garlic clove, very finely chopped
+ingredients: "1 medium fennel bulb, outer layer, stalks and fronds removed, root end trimmed of brown bits
+1 small red onion (about 1/4 pound), cut into 1/2-inch thick rounds
+1 small head radicchio (outermost leaves removed, bottom trimmed of brown bits, quartered lengthwise) and cut into 1/2-inch thick wedges
+1/2 cup extra-virgin olive oil
+3 tablespoons sherry vinegar
+1 teaspoon Maldon or another flaky sea salt
+1 small garlic clove, very finely chopped
 A five-finger pinch of fresh mint leaves
 A five-finger pinch of fresh marjoram leaves
 
@@ -223,8 +227,8 @@ ingredients: "8 ounces fresh beets
 1 1/4 teaspoons baking powder
 3 tablespoons good quality cocoa powder
 5 eggs
-   Scant 1 cup superfine sugar
-   Crème fraîche and poppy seeds, to serve
+Scant 1 cup superfine sugar
+Crème fraîche and poppy seeds, to serve
 
 Serves 8",
 instructions: "1. Lightly butter an 8-inch springform cake pan and line the base with a round of baking parchment. Heat the oven to 350 degrees F.
@@ -248,19 +252,19 @@ author_id: 4)
 Recipe.create(
 title: "Smoked Beets",
 image: "https://images.food52.com/sCPZ_UJRfr8KiUGaw_tA4324z1k=/753x502/9fc86702-1661-4f9a-bb3d-aec1654998a1--092711-food52-256.jpg",
-ingredients: "For the smoked beets
-8	small beets, with greens if possible
-1	small bunch fresh rosemary
+ingredients: "For the smoked beets:
+8 small beets, with greens if possible
+1 small bunch fresh rosemary
 
-For the salad
-1	tablespoon red wine vinegar
+For the salad:
+1 tablespoon red wine vinegar
 Extra virgin olive oil
 Sea salt and freshly ground black pepper
 1 small bunch fresh flat-leaf parsley, leaves picked and roughly chopped
 1 small bunch fresh tarragon or basil, leaves picked and roughly chopped
 4 heaped tablespoons cottage cheese
-   Juice and zest from 1/2 lemon, plus more to taste
-   A few sprigs of fresh thyme, leaves picked
+Juice and zest from 1/2 lemon, plus more to taste
+A few sprigs of fresh thyme, leaves picked
 
 Serves 4 as a side dish",
 instructions: "1. First, light your charcoal barbecue or fire. Wash the beets and snip off the greens, reserving them. Fold a large piece of foil -- about 12-18in or 24-36in unfolded, depending on the size of your beets -- in half to form a double layer. Lay the greens, then the beets, then the rosemary on top of the foil. *Note: if you don't have greens with your beets -- or want to save them to cook separately -- that's okay, just make sure the coals are at medium heat, not flaming, when you add your packet of beets.
@@ -282,7 +286,7 @@ image: "http://assets.epicurious.com/photos/559eb8d92165ea177986b559/master/pass
 ingredients: "2 large and long eggplants
 1/3 cup olive oil
 1 1/2 tsp lemon thyme leaves, plus a few whole sprigs to garnish
-    Maldon sea salt and black pepper
+Maldon sea salt and black pepper
 1 pomegranate
 1 tsp za'atar
 
@@ -291,7 +295,7 @@ Sauce:
 1/2 cup Greek yogurt
 1 1/2 tbsp  olive oil, plus a drizzle to finish
 1 small garlic clove, crushed
-    Pinch of salt
+Pinch of salt
 
 Serves 4 as a starter",
 instructions: "1. Preheat the oven to 400°F. Cut the eggplants in half lengthways, cutting straight through the green stalk (the stalk is for the look; don't eat it). Use a small sharp knife to make three or four parallel incisions in the cut side of each eggplant half, without cutting through to the skin. Repeat at a 45-degree angle to get a diamond-shaped pattern.
@@ -347,21 +351,21 @@ Recipe.create(
 title: "Quinoa and Mango Salad",
 image: "https://images.food52.com/eEokFszEkrAA8Pv06XLNiWpDqiE=/753x502/0072cb79-cbcc-4a52-9260-d426da686d60--2013-0625_quinoa-mango-salad-029.jpg",
 ingredients: "Quinoa and Mango Salad:
-1	cup regular, red or black quinoa, rinsed well in a strainer
-2	cups water
-3	mangoes
-1	large red onion, halved stem to root and slivered
-1	can black beans, rinsed and drained
-2	cups micro greens (I used a rainbow blend package from Whole Foods herb section: mizuna, curly cress, red and yellow beet, arugula, cabbage) – if not available, mesclun, spring or baby greens are fine, rinsed and dried
-3	tablespoons chopped cilantro
-1-2	avocados, halved, pitted and sliced
-1	tablespoon olive oil
+1 cup regular, red or black quinoa, rinsed well in a strainer
+2 cups water
+3 mangoes
+1 large red onion, halved stem to root and slivered
+1 can black beans, rinsed and drained
+2 cups micro greens (I used a rainbow blend package from Whole Foods herb section: mizuna, curly cress, red and yellow beet, arugula, cabbage) – if not available, mesclun, spring or baby greens are fine, rinsed and dried
+3 tablespoons chopped cilantro
+1-2 avocados, halved, pitted and sliced
+1 tablespoon olive oil
 Salt and pepper, to taste
 
 Lemony-Ginger Dressing:
-3-4	teaspoons lemon juice
-3-4	tablespoons olive oil
-1/2	teaspoon freshly grated ginger (or 1 tsp ground ginger)
+3-4 teaspoons lemon juice
+3-4 tablespoons olive oil
+1/2 teaspoon freshly grated ginger (or 1 tsp ground ginger)
 Salt and pepper, to taste
 
 Serves serves 4-6 as a main course, 6-8 as a starter",
@@ -383,27 +387,27 @@ Recipe.create(
 title: "Snow Pea, Cabbage, and Mizuna Salad with Marinated and Seared Tempeh",
 image: "https://images.food52.com/vMP9PfRAMTLRC1c8ihzOkmQfvI4=/753x502/67a74eb7-9d20-46b0-92aa-67409daba666--Salad1.jpeg",
 ingredients: "Basic Marinated Tempeh:
-2	tablespoons apple cider or rice vinegar (apple cider is my preference)
-2	tablespoons soy sauce or tamari
-2	tablespoons water
-1	teaspoon grated or minced ginger root
-1	teaspoon toasted sesame oil
-8	ounces tempeh, sliced into thin strips (about 1/4 inch or a little less)
-2	teaspoons coconut oil (optional, for frying)
+2 tablespoons apple cider or rice vinegar (apple cider is my preference)
+2 tablespoons soy sauce or tamari
+2 tablespoons water
+1 teaspoon grated or minced ginger root
+1 teaspoon toasted sesame oil
+8 ounces tempeh, sliced into thin strips (about 1/4 inch or a little less)
+2 teaspoons coconut oil (optional, for frying)
 
 Snow Pea, Cabbage, and Mizuna Salad with Miso Mustard Dressing:
-6	ounces snow peas, trimmed
-2	cups red cabbage, shredded
-1	cup carrot, shredded
-2	cups mizuna
-2	green onions, sliced thin
-1/4	cup cilantro, diced
-2	tablespoons mellow white miso
-1	tablespoon dijon mustard
-1/4	cup olive oil
-3	tablespoons lemon juice
-1	small clove garlic, minced
-1	tablespoon maple syrup
+6 ounces snow peas, trimmed
+2 cups red cabbage, shredded
+1 cup carrot, shredded
+2 cups mizuna
+2 green onions, sliced thin
+1/4 cup cilantro, diced
+2 tablespoons mellow white miso
+1 tablespoon dijon mustard
+1/4 cup olive oil
+3 tablespoons lemon juice
+1 small clove garlic, minced
+1 tablespoon maple syrup
 
 Serves 4",
 instructions: "1. To prepare the tempeh, whisk together the vinegar, soy sauce or tamari, water, ginger, and sesame oil. Arrange tempeh in a large, shallow bowl (a small casserole will also work) and pour the marinade over the pieces. Allow them to marinate for 2-3 hours (or over the course of a day, refrigerated).
