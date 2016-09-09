@@ -77,50 +77,26 @@ class RecipeForm extends React.Component {
 
           <form onSubmit={this.handleSubmit}>
             <label className='form-field-title'>Title</label>
-            <br />
-            <input type='string' value={this.state.title}
+            <input type='string'
+              value={this.state.title}
               onChange={this.update("title")}
               className='form-field'
               />
-            <br />
 
             <label className='form-field-title'>Photo</label>
-            <br />
-            {this.state.image ?
-              ( <img src={this.state.image}/>) :
-              ( <button className='new-form-photo'
-              onClick={this.uploadPhoto}>Upload photo</button> )
-            }
-            <br />
-
+            <div className='form-uploaded-photo'>
+              {this.state.image ?
+                ( <img src={this.state.image}/>) :
+                ( <button className='new-form-photo'
+                onClick={this.uploadPhoto}>Upload photo</button> )
+              }
+            </div>
+            <br/>
             <label className='form-field-title'>Ingredients</label>
-            <br />
             <textarea rows="10" cols="100" value={this.state.ingredients}
                 onChange={this.update("ingredients")}
                 className='form-field'/>
-            <br />
-            <label className='form-field-title'>
-              Which vegetables do you want to add this recipe to?</label>
-            <br />
-            {Object.keys(this.props.vegetables).map(
-              (vegId) => {
-                const vegName = this.props.vegetables[vegId].name;
-
-                return (
-                  <label key={vegId}>
-                    {vegName.toLowerCase()}
-                    <input type="checkbox"
-                      value={vegName}
-                      onChange={this.updateCheckbox(vegId)}
-                      className="form-field-checkbox"
-                      checked={this.state.vegetables.includes(vegName)}/>
-                  </label>
-                );
-              }
-            )}
-            <br />
             <label className='form-field-title'>Instructions</label>
-            <br />
             <textarea rows="20" cols="100" value={this.state.instructions}
                 onChange={this.update("instructions")}
                 className='form-field'/>

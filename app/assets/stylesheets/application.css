@@ -40,18 +40,3 @@ button {
   padding: 1vw;
   text-align: center;
 }
-
-.new-form {
-  float: left;
-  margin: 50px 100px;
-}
-
-.form-field-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.form-field {
-  padding: 5px;
-  font-size: 14px;
-}
