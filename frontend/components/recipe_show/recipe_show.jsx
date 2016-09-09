@@ -16,14 +16,21 @@ const handleEdit = (recipeId, router) => (
   }
 );
 
-const commentList = (comments = []) => (
-    comments.map( (comment) => (
-      <CommentShow
-        userId={comment.userId}
-        body={comment.body}
-        key={comment.id}/>
-    ))
-);
+const commentList = (comments=[]) => {
+  return (
+      comments.map( (comment) => {
+        const date = new Date(comment.created_at);
+        return (
+          <CommentShow
+            username={comment.commenter}
+            date={date.toDateString()}
+            body={comment.body}
+            key={comment.id}/>
+
+        );
+      })
+    );
+};
 
 const RecipeShow = ({recipe, recipeId,
   requestRecipe, deleteRecipe,

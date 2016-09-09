@@ -1,11 +1,11 @@
 .comments-wrapper {
   width: 100%;
-  background: white;
   margin: 2vw 0;
 }
 
 .comment-form {
   padding: 3vw;
+  background: white;
 }
 
 .comment-title {
@@ -35,4 +35,34 @@
 
 .login-to-comment {
   font-size: 1.3vw;
+}
+
+.comments {
+  padding: 3vw;
+  margin-top: 2vw;
+  background: white;
+}
+
+.comment-wrapper {
+  padding: 2vw 0;
+  border-top: 1px solid #e2e1d7;
+  border-bottom: 1px solid #e2e1d7;
+}
+
+.comment-user-date {
+  display: flex;
+  margin-bottom: .2vw;
+}
+
+.comment-user {
+  margin: 0;
+  margin-right: 2vw;
+  line-height: 2.24vw;
+  font-size: 1.7vw;
+}
+
+.comment-date {
+  font-size: 1.4vw;
+  color: #70706e;
+  line-height: 2.24vw;
 }
