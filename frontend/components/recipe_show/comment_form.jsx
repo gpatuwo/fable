@@ -6,7 +6,6 @@ class CommentForm extends React.Component {
     super(props);
     this.state ={
       body: "",
-      user_id: props.currentUser.id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToRecipeShow = this.navigateToRecipeShow.bind(this);
@@ -23,10 +22,11 @@ class CommentForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const recipeId = parseInt(this.props.recipeId);
+    const userId = parseInt(this.props.currentUser.id);
     const comment = Object.assign(
       {},
       this.state,
-      { recipe_id: recipeId }
+      { recipe_id: recipeId,  user_id: userId}
     );
     this.props.createComment({comment});
     this.navigateToRecipeShow();
@@ -40,8 +40,8 @@ class CommentForm extends React.Component {
     };
   }
 
-  render() {
-    return (
+  renderCommentForm() {
+    return(
       <div className="comment-form">
         <form className="comment"
           onSubmit={this.handleSubmit}>
@@ -59,6 +59,22 @@ class CommentForm extends React.Component {
         <button
           onClick={this.navigateToRecipeShow}
           className="comment-cancel">Cancel</button>
+      </div>
+    );
+  }
+
+  renderCommentLogin(){
+    return(
+      <section className="login-to-comment">
+        <h3>Please login or signup to comment :) </h3>
+      </section>
+    );
+  }
+
+  render() {
+    return (
+      <div className="comment-form">
+        { this.props.currentUser ? this.renderCommentForm() : this.renderCommentLogin() }
       </div>
     );
  }

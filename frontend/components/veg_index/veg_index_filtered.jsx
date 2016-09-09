@@ -81,7 +81,7 @@ class VegIndexFiltered extends React.Component {
 
           <section className="veg-selection-wrapper">
             <ul className="veg-selection">
-              <h4 className="veg-selection-head">Section:</h4>
+              <h4 className="veg-selection-head">Selection:</h4>
               {selectedVegIds.map(
                 (vegId) => {
 
