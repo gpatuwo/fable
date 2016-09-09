@@ -16,6 +16,7 @@ import RecipeShowContainer from '../recipe_show/recipe_show_container.js';
 import RecipeFormContainer from '../recipe_form/recipe_form_container.js';
 import RecipeEditFormContainer from
  '../recipe_edit/recipe_edit_form_container.js';
+import CommentFormContainer from '../recipe_show/comment_form_container.js';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -81,7 +82,11 @@ class AppRouter extends React.Component{
               component={RecipeFormContainer}
               onEnter={this._ensureLoggedIn}/>
             <Route path=":recipeId"
-              component={RecipeShowContainer}/>
+              component={RecipeShowContainer}>
+              <Route path="comment"
+                component={CommentFormContainer}
+                onEnter={this._ensureLoggedIn}/>
+            </Route>
             <Route path=":recipeId/edit"
               component={RecipeEditFormContainer}/>
           </Route>)

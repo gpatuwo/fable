@@ -50,5 +50,26 @@
 }
 
 .comment-title {
+  font-size: 2.5vw;
+  color: #70706e;
+}
 
+.comment-textarea {
+  width: 100%;
+  border: 1px solid #70706e;
+  margin: 1vw 3vw 1vw 0;
+}
+
+.comment-submit {
+  width: 20%;
+  background: #d83a16;
+  color: white;
+  font-family: 'Roboto';
+  padding: 1vw;
+  text-align: center;
+}
+
+.comment-cancel {
+  background: #e2e1d7;
+  color: #70706e;
 }

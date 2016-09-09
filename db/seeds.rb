@@ -15,6 +15,11 @@ User.create(username: 'Yotam Ottolenghi', password: "asdfasdf")
 User.create(username: 'Alice Waters', password: "asdfasdf")
 User.create(username: "Guest", password: "password")
 
+Comment.create(body: "this artichoke thing is so delicious!!!", recipe_id: 1, user_id: 1)
+Comment.create(body: "this cassoulet is so delicious!!!", recipe_id: 2, user_id: 1)
+Comment.create(body: "this aioli is so delicious!!!", recipe_id: 3, user_id: 1)
+Comment.create(body: "this grilled veggie salad is so delicious!!!", recipe_id: 4, user_id: 1)
+Comment.create(body: "this cake is so delicious!!!", recipe_id: 5, user_id: 1)
 
 Vegetable.create(name: 'Artichokes', description: 'It’s easy to forget that artichokes are largely a California phenomenon. Any dinner guest from outside the state will remind you of this: just notice the bewildered look on their faces as the artichoke is placed in front of them, followed by, “How do I eat this?” This is not an unreasonable question. The easiest way would be to steam it and then dip the leaves in a delicious sauce or aioli.', jan: false, feb: false, mar: true, apr: true, may: true, jun: true, jul: false, aug: false, sep: true, oct: true, nov: true, dec: true, image: 'http://res.cloudinary.com/djulergb7/image/upload/v1473114555/artichokes_sdmhoi.jpg')
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router';
 import CommentFormContainer from './comment_form_container.js';
+import CommentShow from './comment_show.jsx';
 
 const handleDelete = (deleteRecipe, router) => (
   () => {
@@ -13,6 +14,15 @@ const handleEdit = (recipeId, router) => (
   () => {
     router.push(`recipes/${recipeId}/edit`);
   }
+);
+
+const commentList = (comments = []) => (
+    comments.map( (comment) => (
+      <CommentShow
+        userId={comment.userId}
+        body={comment.body}
+        key={comment.id}/>
+    ))
 );
 
 const RecipeShow = ({recipe, recipeId,
@@ -48,6 +58,13 @@ const RecipeShow = ({recipe, recipeId,
 
       <div className="comments-wrapper">
         <CommentFormContainer recipeId={recipe.id}/>
+
+        <section className="comments">
+          <label className="comment-title">Comments
+          </label>
+          {commentList(recipe.comments)}
+        </section>
+
       </div>
     </div>
   );

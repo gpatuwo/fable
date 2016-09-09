@@ -2,7 +2,6 @@ import React from 'react';
 import {Link, withRouter} from 'react-router';
 
 const sessionLinks = () => {
-  console.log("not logged in");
   return (
     <li className='header-links'>
       <Link to="#">
@@ -24,7 +23,6 @@ const sessionLinks = () => {
 };
 
 const personalGreeting = (currentUser, router, logout) => {
-  console.log('logged in');
   return (
     <li className='header-links'>
       <Link to="#">

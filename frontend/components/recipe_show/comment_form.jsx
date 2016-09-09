@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { hashHistory, withRouter } from 'react-router';
 
 class CommentForm extends React.Component {
   constructor(props){
@@ -13,13 +13,16 @@ class CommentForm extends React.Component {
   }
 
   navigateToRecipeShow() {
-    const recipeUrl = "/recipes/" + this.props.params.recipeId;
-    hashHistory.push(recipeUrl);
+    this.setState({body: ""}, ()=> {
+      const recipeUrl = "/recipes/" + this.props.recipeId;
+
+      this.props.router.push(recipeUrl);
+    });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const recipeId = parseInt(this.props.params.recipeId);
+  handleSubmit(e) {
+    e.preventDefault();
+    const recipeId = parseInt(this.props.recipeId);
     const comment = Object.assign(
       {},
       this.state,
@@ -43,21 +46,22 @@ class CommentForm extends React.Component {
         <form className="comment"
           onSubmit={this.handleSubmit}>
 
-          <label className="comment-title">Comment</label>
+          <label className="comment-title">Leave a Comment</label>
           <br/>
           <textarea
             className="comment-textarea"
-            cols='30'
-            rows='10'
+            rows='8'
             value={this.state.body}
             onChange={this.update("body")}></textarea>
           <br/>
-          <input type="submit"/>
+          <input type="submit" className="comment-submit"/>
         </form>
-        <button onClick={this.navigateToRecipeShow}>Cancel</button>
+        <button
+          onClick={this.navigateToRecipeShow}
+          className="comment-cancel">Cancel</button>
       </div>
     );
  }
 }
 
-export default CommentForm;
+export default withRouter(CommentForm);
