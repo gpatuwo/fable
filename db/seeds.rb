@@ -5,6 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.destroy_all
+Comment.destroy_all
+Vegetable.destroy_all
+Recipe.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('vegetables')
+ActiveRecord::Base.connection.reset_pk_sequence!('recipes')
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('comments')
 
 User.create(username: 'Grace', password: "asdfasdf")
 User.create(username: 'April Bloomfield', password: "asdfasdf")
