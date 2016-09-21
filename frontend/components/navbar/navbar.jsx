@@ -48,7 +48,7 @@ const NavBar = ({currentUser, router, logout}) => (
     <nav className="header-nav">
 
       <Link to="/" className='header-logo'>
-        <img src="assets/fable_white.png"/>
+        <img src="assets/fable_white.png" className="logo"/>
       </Link>
 
       <ul className="header-list group">
