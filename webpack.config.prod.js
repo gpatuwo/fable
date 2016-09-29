@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var path = require("path");
 
 module.exports = {
   context: __dirname,
@@ -15,7 +16,7 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress:{
-        warnings: true
+        warnings: false
       }
     })
   ],
