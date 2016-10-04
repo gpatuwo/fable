@@ -15,7 +15,7 @@ class RecipeForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadPhoto = this.uploadPhoto.bind(this);
-    this.updateCheckbox = this.updateCheckbox.bind(this);
+    // this.updateCheckbox = this.updateCheckbox.bind(this);
   }
 
   componentDidMount(){
@@ -58,14 +58,14 @@ class RecipeForm extends React.Component {
     );
   }
 
-  updateCheckbox(vegId){
-    const vegetable = this.props.vegetables[vegId].name;
-    return () => {
-      var vegetables = this.state.vegetables;
-      vegetables.push(vegetable);
-      this.setState({vegetables: vegetables});
-    };
-  }
+  // updateCheckbox(vegId){
+  //   const vegetable = this.props.vegetables[vegId].name;
+  //   return () => {
+  //     var vegetables = this.state.vegetables;
+  //     vegetables.push(vegetable);
+  //     this.setState({vegetables: vegetables});
+  //   };
+  // }
 
   render(){
     return(
