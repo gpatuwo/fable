@@ -23,6 +23,8 @@ User.create(username: 'Yotam Ottolenghi', password: "asdfasdf")
 User.create(username: 'Alice Waters', password: "asdfasdf")
 User.create(username: "Guest", password: "password")
 User.create(username: "Mark Bittman", password: "asdfasdf")
+User.create(username: "Martha Rose Shulman", password: "asdfasdf")
+User.create(username: "Blue Apron", password: "asdfasdf")
 
 Comment.create(body: "this artichoke thing is so delicious!!!", recipe_id: 1, user_id: 1)
 Comment.create(body: "this cassoulet is so delicious!!!", recipe_id: 2, user_id: 1)
@@ -48,17 +50,9 @@ Several different of beets are commonly grown: the traditional red beet, the pin
 
 There are many different ways to cook beets; their earthy flavor is nicely offset by vinegar, meaning they are commonly eaten cold in salads with vinaigrettes. Leaving their skin on while cooking will preserve the color. You can test its doneness by sticking a knife through the vegetable, near its cap, which should pierce easily, its skin, should also be easier to peel off when this vegetable is fully cooked.", jan: true, feb: true, mar: true, apr: true, may: true, jun: true, jul: true, aug: true, sep: true, oct: true, nov: true, dec: true, image: 'http://res.cloudinary.com/djulergb7/image/upload/v1473114663/gold_beets_fyaynh.jpg')
 
-Vegetable.create(name: 'Cardoons', description: "The Cardoon is a thistle-like plant in the same family as the artichoke, which explains why its stalk is so similar in flavor. The cardoon is a very popular ingredient in Mediterranean style cooking, where it is native and has been cultivated since ancient times. However, cardoons are considered a weed in Australia and California because of its invasive nature and adaptability to dry climates. In Portugal, cardoons are used as a vegetarian source of enzymes for cheese production, which gives the cheese a distinct earthy and herbaceous taste.
+Vegetable.create(name: 'Cardoon', description: "The Cardoon is a thistle-like plant in the same family as the artichoke, which explains why its stalk is so similar in flavor. The cardoon is a very popular ingredient in Mediterranean style cooking, where it is native and has been cultivated since ancient times. However, cardoons are considered a weed in Australia and California because of its invasive nature and adaptability to dry climates. In Portugal, cardoons are used as a vegetarian source of enzymes for cheese production, which gives the cheese a distinct earthy and herbaceous taste.
 
 Cardoons are only edible when cooked. To cook cardoons, trim off any leaves or thorns, and peel the stalks with a vegetable peeler to remove the indigestible fibers. Cardoons discolor when cut; place cut pieces in cold water with lemon juice to keep them from turning brown. Cardoons can be braised, sautéed, boiled in soups and stews, or dipped in batter and deep fried. Depending on the age of the stalks, they can take up to an hour to get soft and tender enough to eat.", jan: true, feb: true, mar: true, apr: true, may: true, jun: true, jul: false, aug: false, sep: false, oct: false, nov: true, dec: true, image: 'http://res.cloudinary.com/djulergb7/image/upload/v1473114881/cardoons_ctce1n.jpg')
-
-Vegetable.create(name: 'Chicory', description: "Chicory, or cichorium intybus, is a bushy perennial herb with blue, lavender, or occasionally white flowers. It grows as a wild plant on roadsides in its native Europe, and in North America and Australia. The chicory root is also often ground and used as a coffee substitute or roasted and added to beer to give it a unique flavor.
-
-Commonly cultivated varieties include Belgian endive, radicchio, and puntarelle. Belgian endive (not to be confused with endive, a close relative of the chicory), is a crisp, pale yellow chicory with bitter leaves that are excellent grilled or stuffed and served as an hors d’oeuvre.
-
-Often referred to as Italian chicory, radicchio is a dark maroon color with leaves that have white veins and a bitter taste that can be reduced through cooking. Different varieties are named according to the Italian region from which they originated. The most well-known variety is the Chioggia, which can grow to the size of the grapefruit. In Italy, radicchio is often eaten grilled or cooked with olive oil and in the United States, the leaves are often eaten raw in salads. Radicchio can also be found mixed in pastas, pizzas, and risottos.
-
-The slender, serrated leaves of the puntarelle have many of the same distinctive tastes and characteristics as its relatives. Its crisp leaves are said to have the spiciness of arugula with hints of fennel, and the shoots have the texture of celery. Puntarelle is traditionally used raw in salads and is classically served with a heavy dressing, often with anchovies, that helps sweeten its bitter notes. Some chefs recommend soaking the leaves in water for a few hours before cooking, allowing the leaves to curl, becoming juicier and less tart.", jan: true, feb: true, mar: true, apr: true, may: true, jun: true, jul: true, aug: true, sep: true, oct: true, nov: true, dec: true, image: 'http://res.cloudinary.com/djulergb7/image/upload/v1473115223/chicory_xfuaeg.jpg')
 
 Vegetable.create(name: 'Eggplant', description: "The eggplant, or aubergine as it is called in France, is a vegetable valued for its taste and texture. However, early varieties of eggplant didn’t have the same culinary appeal as they do today. Due to its bitter taste, Europeans tended to grow eggplants for their decorative properties rather than their culinary use. It wasn’t until new varieties were developed in the 18th century that the eggplant lost a bit of its sour flavor and reputation.
 
@@ -668,26 +662,68 @@ author_id: 9
 )
 
 Recipe.create(
-title: " ",
-image: " ",
-ingredients: "
-Serves 4",
-instructions: " ",
-author_id:
+title: "Salsa Fresca with Kohlrabi",
+image: "https://static01.nyt.com/images/2014/07/29/science/29recipehealth/29recipehealth-articleLarge.jpg",
+ingredients: "¼ cup finely chopped red or white onion
+½ medium kohlrabi (about 1/2 pound), cut in small dice (1 cup)
+1 pound ripe tomatoes, diced (2 cups)
+1 to 2 serrano or jalepeño chiles (or more, to taste), minced
+¼ to ½ cup chopped cilantro (to taste)
+1 to 2 tablespoons fresh lime juice (to taste)
+ Salt to taste
+
+Makes about 2 ¼ cups",
+instructions: "1. Place onion in a small bowl and cover with cold water. Let sit for 5 minutes. Drain and rinse with cold water. Drain on paper towels.
+
+2. Combine kohlrabi and tomatoes in a medium bowl. Add onions, chiles, cilantro, lime juice and salt to taste and stir together. Let sit for 15 to 30 minutes before serving.",
+author_id: 10
+)
+
+Recipe.create(
+title: "Grated Carrot, Kohlrabi and Radish Salad",
+image: "https://static01.nyt.com/images/2011/01/19/science/19recipehealth/19recipehealth-articleLarge-v2.jpg",
+ingredients: "1 ½ pounds mixed carrots, kohlrabi, black radish and daikon, peeled and grated on the large holes of a grater or cut in thin julienne (any combination; 4 cups total)
+ Kosher salt to taste about 1/2 teaspoon
+1 ½ cups water
+1 tablespoon sugar
+½ cup rice vinegar
+2 tablespoons slivered mint leaves or chopped cilantro optional
+
+Serves 6",
+instructions: "1. Combine the grated or julienne vegetables in a large bowl, and toss with about 1/2 teaspoon salt. Place in a strainer or colander set over a bowl or in the sink. Let stand for about 30 minutes.
+
+2. Meanwhile, combine the water, sugar and vinegar in a saucepan, bring to a boil and remove from the heat. Pour into the bowl in which you combined the vegetables, and allow to cool to room temperature.
+
+3. Briefly rinse the vegetables, and squeeze dry. Add to the bowl with the vinegar mixture, and stir together. Refrigerate for one hour or longer. To serve, lift from the vinegar bath with a slotted spoon and arrange on a platter. Garnish with the mint or cilantro, and serve.",
+author_id: 10
 )
 Recipe.create(
-title: " ",
-image: " ",
-ingredients: "
+title: "Ginger Beef Stir-Fry with Tatsoi & Jasmine Rice",
+image: "https://media.blueapron.com/recipes/9/c_main_dish_images/20140808-1611-72-7880/GingerBeefStir_20Fry_BlueApron_splash_feature.jpg",
+ingredients: "1 Cup Jasmine Rice
+8 Ounces Tatsoi
+3 Scallions
+2 Cloves Garlic
+1 Bunch Thai Basil
+1 Small Piece Ginger
+10 Ounces Top Round Steak
+2 Tablespoons Soy Sauce
+¼ Cup Hoisin Sauce
+
 Serves 4",
-instructions: " ",
-author_id:
-)
-Recipe.create(
-title: " ",
-image: " ",
-ingredients: "
-Serves 4",
-instructions: " ",
-author_id:
+instructions: "1. Cook the rice:
+In a small pot, combine the rice, 2 cups of water, and a big pinch of salt. Heat to boiling on high, then cover and reduce the heat to low. Simmer 15 to 20 minutes, or until the liquid is absorbed and the rice is cooked through. Fluff the finished rice with a fork.
+
+2. Prepare the ingredients:
+While the rice cooks, wash and dry the fresh produce. Cut the tatsoi into bite-sized pieces. Slice the scallions. Peel and roughly chop the garlic. Peel and mince the ginger. Pick the Thai basil leaves off the stems. Thinly slice the steak.
+
+3. Stir-fry the beef:
+In a large pan, heat some oil on high until hot. Add the sliced beef and season with salt and pepper. Cook 2 to 3 minutes, or until browned, stirring occasionally. Transfer the stir-fried beef to a plate, leaving behind any juices in the pan.
+
+4. Add the aromatics & sauces:
+In the same pan used for the beef, add a little more oil and heat it on medium-high. Add the garlic and ginger; cook for about 30 seconds, or until fragrant. Stir in the tatsoi, soy sauce, half of the hoisin sauce, and half the scallions. Cook 2 to 4 minutes, or until the vegetables are softened and coated in the sauce. Add the stir-fried beef back to the pan and cook until heated through and coated in the sauce. Remove from heat.
+
+5. Plate your dish:
+Divide the rice between 2 plates. Top each with the beef and tatsoi stir-fry. Garnish each with the Thai basil, remaining hoisin sauce, and remaining scallions. Enjoy!",
+author_id:11
 )
