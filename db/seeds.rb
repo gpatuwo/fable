@@ -22,6 +22,7 @@ User.create(username: 'Jamie Oliver', password: "asdfasdf")
 User.create(username: 'Yotam Ottolenghi', password: "asdfasdf")
 User.create(username: 'Alice Waters', password: "asdfasdf")
 User.create(username: "Guest", password: "password")
+User.create(username: "Mark Bittman", password: "asdfasdf")
 
 Comment.create(body: "this artichoke thing is so delicious!!!", recipe_id: 1, user_id: 1)
 Comment.create(body: "this cassoulet is so delicious!!!", recipe_id: 2, user_id: 1)
@@ -643,4 +644,50 @@ instructions: "1. Set broiler to high.
 
 9. Ladle soup into bowls, garnish with tortilla strips (or chips), chicken, avocado slices, a drizzle of crema, cilantro, and cotija. Serve soup with a lime wedge.",
 author_id: 3
+)
+
+Recipe.create(
+title: "Butter-Braised Cardoons With Mushrooms and Bread Crumbs",
+image: "https://static01.nyt.com/images/2015/04/08/dining/08CARDOONS/08CARDOONS-articleLarge.jpg",
+ingredients: " Salt, as needed
+4 slender cardoon stalks, the paler in color the better
+½ lemon, plus a wedge for squeezing over the finished dish
+½ stick (4 tablespoons) unsalted butter
+1 large clove garlic, peeled and minced
+4 large shiitake (caps only) or other mushrooms, cleaned and sliced, about 1 1/2 cups
+½ cup lightly packed fresh coarse bread crumbs
+ Pepper, to taste
+
+Serves 4",
+instructions: "1. Bring a large pot of water to boil and salt it moderately. Strip the cardoons of leaves and string as you would celery. Cut each stalk lengthwise into 2 or 3 long strips, then crosswise into 2-inch lengths. You’ll have about 3 cups. Squeeze the lemon juice into the water and boil the cardoons until fairly tender, 10 to 12 minutes; drain and rinse.
+
+2. Melt the butter over medium heat in a skillet wide enough to accommodate the cardoons comfortably. When the foam subsides, add the cardoons, reduce the heat to medium-low and cook, stirring occasionally, until they take on a bit of color, 10 to 12 minutes. Add the garlic and mushrooms and continue to cook until the mushrooms are mostly tender, 5 minutes. Add the bread crumbs and a pinch of salt and raise the heat to medium-high; cook, stirring occasionally, until the bread crumbs brown a bit and the cardoons are fully tender and sweet, 5 minutes longer.
+
+3. Squeeze a bit of lemon juice over the top, taste for salt, add pepper to taste and serve hot or warm.",
+author_id: 9
+)
+
+Recipe.create(
+title: " ",
+image: " ",
+ingredients: "
+Serves 4",
+instructions: " ",
+author_id:
+)
+Recipe.create(
+title: " ",
+image: " ",
+ingredients: "
+Serves 4",
+instructions: " ",
+author_id:
+)
+Recipe.create(
+title: " ",
+image: " ",
+ingredients: "
+Serves 4",
+instructions: " ",
+author_id:
 )
