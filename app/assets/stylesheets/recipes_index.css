@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 
+.recipe-index-item:hover {
+    border: 2px solid #d83a16;
+}
+
 .recipe-index-photo-wrapper {
   width: 86%;
   position: relative
