@@ -1,5 +1,4 @@
-![fable-logo]
-[fable-logo]: ./public/fable_orange.png
+![fable-logo](/public/fable_orange.png)
 [live][fable]
 [fable]: http://www.fablefood.com
 
