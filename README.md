@@ -1,6 +1,6 @@
 ![fable-logo](/public/fable_orange.png)
-[live][fable]
-[fable]: http://www.fablefood.com
+
+[live](http://www.fablefood.com)
 
 ##### Fable provides you with recipes for vegetables that are currently in-season in the Bay Area.
 
@@ -12,8 +12,7 @@
 
 ## Vegetables
 Fable filters through all the vegetables in its database to give you the vegetables that are currently in-season this month:
-![veg-filter]
-[veg-filter]: ./public/veg-filter.png
+![veg-filter](./public/veg-filter.png)
 Below is the process for filtering the vegetables:
 ``` javascript
   vegetables && Object.keys(vegetables).map(
@@ -27,8 +26,7 @@ Below is the process for filtering the vegetables:
 ```
 ## Recipes
 You can click on these vegetables to select recipes that contain those ingredients.
-![recipe-selection]
-[recipe-selection]: ./public/recipe-selection.png
+![recipe-selection](./public/recipe-selection.png)
 
 To implement this selection, I created a handle to add the selected vegetables into state and then using that to render all the matching recipes
 ``` javascript
@@ -40,13 +38,11 @@ handleClick(vegId) {
 }
 ```
 These recipes cards show a preview of the recipe, with a scrollable ingredients preview:
-![recipe-scroll]
-[recipe-scroll]: ./public/recipe-scroll.png
+![recipe-scroll](./public/recipe-scroll.png)
 
 ## Log in/Sign up
 To submit a new recipe or to comment on a recipe, login is required:
-![login]
-[login]: ./public/login.png
+![login](./public/login.png)
 
 On the backend, password data is protected:
 ```ruby
